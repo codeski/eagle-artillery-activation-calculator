@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Troops from './components/troops'
+import Title from './components/title'
+import Spells from './components/spells'
+import EagleLvl from './components/eaglelvl'
+import Activation from './components/activation'
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    <div>
+      <Title />
+      <Troops />
+      <Spells /> 
+      <EagleLvl />
+      <Activation /> 
+
     </div>
   );
 }
