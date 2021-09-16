@@ -29,36 +29,34 @@ export const DEtroops = [
 ]
 
 export const ElixirSpells = [
-    {name: 'Lightning', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, space: 5},
-    {name: 'Healing', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, space: 10},
-    {name: 'Rage', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, space: 10},
-    {name: 'Jump', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, space: 10},
-    {name: 'Freeze', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, space: 5},
-    {name: 'Clone', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, space: 15},
-    {name: 'Invisibility', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,space: 5}
+    {name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, space: 5},
+    {name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, space: 10},
+    {name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, space: 10},
+    {name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, space: 10},
+    {name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, space: 5},
+    {name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, space: 15},
+    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,space: 5}
 ]
 
 export const DEspells = [
-    {name: 'Hog Rider', pic: '/images/DEtroops/Hog_Rider.png', space: 5},
-    {name: 'Valkyrie', pic: '/images/DEtroops/Valkyrie.png', space: 8},
-    {name: 'Golem', pic: '/images/DEtroops/Golem.png', space: 30},
-    {name: 'Witch', pic: '/images/DEtroops/Witch.png', space: 12},
-    {name: 'Lava Hound', pic: '/images/DEtroops/Lava_Hound.png', space: 30},
-    {name: 'Bowler', pic: '/images/DEtroops/Bowler.webp', space: 6},
-    {name: 'Ice_Golem', pic: '/images/DEtroops/Ice_Golem.png', space: 15},
-    {name: 'Headhunter', pic: '/images/DEtroops/Headhunter.webp', space: 6}
+    {name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, space: 5},
+    {name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, space: 5},
+    {name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, space: 5},
+    {name: 'Skeleton Spell', pic: '/images/DEspells/Skeleton.webp', spellSpace: 1, space: 5},
+    {name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, space: 5},
 ]
 
 export const Heros = [
-    {name: 'Hog Rider', pic: '/images/DEtroops/Hog_Rider.png', space: 25},
-    {name: 'Valkyrie', pic: '/images/DEtroops/Valkyrie.png', space: 25},
-    {name: 'Golem', pic: '/images/DEtroops/Golem.png', space: 25},
-    {name: 'Witch', pic: '/images/DEtroops/Witch.png', space: 25}
+    {name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
+    {name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
+    {name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
+    {name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
 ]
 
 export const SiegeMachines = [
-    {name: 'Hog Rider', pic: '/images/DEtroops/Hog_Rider.png', space: 1},
-    {name: 'Valkyrie', pic: '/images/DEtroops/Valkyrie.png', space: 1},
-    {name: 'Golem', pic: '/images/DEtroops/Golem.png', space: 1},
-    {name: 'Witch', pic: '/images/DEtroops/Witch.png', space: 1}
+    {name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1},
+    {name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1},
+    {name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1},
+    {name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1},
+    {name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
 ]

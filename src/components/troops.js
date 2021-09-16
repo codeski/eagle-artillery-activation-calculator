@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Button from './button'
-import {exlixirTroops, DEtroops, ElixirSpells} from '../data/troopData'
+import {exlixirTroops, DEtroops, ElixirSpells, DEspells, Heros, SiegeMachines} from '../data/troopData'
 
 
 
@@ -26,11 +26,33 @@ const Troops = () => {
         )
     }
 
+    const getDEspells = () => {
+        return (
+            DEspells.map(spell => <Button pic={spell.pic} name={spell.name} space={spell.space} />)
+        )
+    }
+
+    const getHeros = () => {
+        return (
+            Heros.map(spell => <Button pic={spell.pic} name={spell.name} space={spell.space} />)
+        )
+    }
+
+
+    const getSiege = () => {
+        return (
+            SiegeMachines.map(spell => <Button pic={spell.pic} name={spell.name} space={spell.space} />)
+        )
+    }
+
     return (
         <div>
             {getElixirTroops()}
             {getDEtroops()}
             {getElixirSpells()}
+            {getDEspells()}
+            {getHeros()}
+            {getSiege()}
         </div>
     )
 }
