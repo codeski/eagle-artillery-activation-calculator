@@ -60,3 +60,18 @@ export const SiegeMachines = [
     {name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1},
     {name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
 ]
+
+export const SuperTroops = [
+    {name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', space: 5},
+    {name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', space: 12},
+    {name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', space: 10},
+    {name: 'Sneaky Goblin', pic: '/images/SuperTroops/Sneaky_Goblin.webp', space: 3},
+    {name: 'Super Wall Breaker', pic: '/images/SuperTroops/Super_Wall_Breaker.webp', space: 8},
+    {name: 'Rocket Balloon', pic: '/images/SuperTroops/Rocket_Balloon.webp', space: 8},
+    {name: 'Super Wizard', pic: '/images/SuperTroops/Super_Wizard.webp', space: 10},
+    {name: 'Inferno Dragon', pic: '/images/SuperTroops/Inferno_Dragon.webp', space: 15},
+    {name: 'Super Minion', pic: '/images/SuperTroops/Super_Minion.webp', space: 12},
+    {name: 'Super Valkyrie', pic: '/images/SuperTroops/Super_Valkyrie.webp', space: 20},
+    {name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', space: 40},
+    {name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', space: 40}
+]
