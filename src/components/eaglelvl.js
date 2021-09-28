@@ -3,9 +3,15 @@ import React, {useState} from 'react'
 const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
+    const [activation, setActivation] = useState(200)
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
+         if (event.target.value === '1' || event.target.value === '2') {
+             setActivation(180)
+         } else {
+             setActivation(200)
+         }
     }
 
     const imageChange = () => {
@@ -24,8 +30,10 @@ const EagleLvl = () => {
 
     return (
         <div>
-            <img src={imageChange()} />
-            <input onChange={valueChange} type="range" min="1" max="5" defaultValue="5" step="1" />
+            <img src={imageChange()} alt={"Eagle Level " + rangeValue} />
+            <input onChange={valueChange} type="range" min="1" max="5" step="1" />
+            <h3>Eagle Level {rangeValue}</h3>
+            <h3>Activates @ {activation}</h3>
         </div>
     )
 }

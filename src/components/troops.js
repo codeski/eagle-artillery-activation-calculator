@@ -54,7 +54,7 @@ const Troops = () => {
 
 
     return (
-        <div>
+        <div className="troops">
             {getElixirTroops()}
             {getDEtroops()}
             {getElixirSpells()}
