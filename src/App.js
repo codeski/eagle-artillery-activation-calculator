@@ -14,7 +14,6 @@ function App() {
       <Spells /> 
       <EagleLvl />
       <Activation /> 
-
     </div>
   );
 }
