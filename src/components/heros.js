@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { HerosData } from '../data/data'
-// import Totals from './componenets/totals'
+import Totals from '../components/totals'
 
 const Heros = () => {
     
     const [heroTotal, setHeroTotal] = useState(0)
-    // const [disabled, setDisabled] = useState(false)
+    const [disabled, setDisabled] = useState(false)
 
     const handleClick = (e) => {
         if (!e.currentTarget.disabled) {
@@ -18,7 +18,7 @@ const Heros = () => {
     return (
         <div>
             {HerosData.map(hero =>          
-                <button onClick={(e) => handleClick(e)} disabled={false}>
+                <button onClick={(e) => handleClick(e)} disabled={disabled}>
                     <img 
                         src={hero.pic} 
                         alt={hero.name} 
@@ -27,6 +27,7 @@ const Heros = () => {
                 </button>
             )}
             <p>{heroTotal}</p>
+            <Totals heroTotal={heroTotal} />
         </div>  
     )
 }
