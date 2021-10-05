@@ -28,17 +28,14 @@ export const DEtroops = [
     {name: 'Headhunter', pic: '/images/DEtroops/Headhunter.webp', space: 6}
 ]
 
-export const ElixirSpells = [
+export const SpellsData = [
     {name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, space: 5},
     {name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, space: 10},
     {name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, space: 10},
     {name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, space: 10},
     {name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, space: 5},
     {name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, space: 15},
-    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,space: 5}
-]
-
-export const DEspells = [
+    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,space: 5},
     {name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, space: 5},
     {name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, space: 5},
     {name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, space: 5},
@@ -46,14 +43,14 @@ export const DEspells = [
     {name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, space: 5},
 ]
 
-export const Heros = [
+export const HerosData = [
     {name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
     {name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
     {name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
     {name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
 ]
 
-export const SiegeMachines = [
+export const SiegeMachinesData = [
     {name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1},
     {name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1},
     {name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1},
