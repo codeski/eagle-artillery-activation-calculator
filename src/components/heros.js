@@ -1,19 +1,33 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { HerosData } from '../data/data'
-import Totals from '../components/totals'
+// import ChosenTroops from './chosenTroops'
 
 const Heros = () => {
     
     const [heroTotal, setHeroTotal] = useState(0)
-    const [disabled, setDisabled] = useState(false)
+    const [disabled, setDisabled] = useState()
+    const [chosenTroops, setChosenTroops] = useState([])
+
+    // useEffect((e) => {
+    //     handleClick
+        
+    // }, [])
 
     const handleClick = (e) => {
-        if (!e.currentTarget.disabled) {
+        if  (!e.currentTarget.disabled) {
+            // console.log(e.target)
+            setChosenTroops(prevChosenTroops => prevChosenTroops.concat(e.target))
+            console.log(chosenTroops)
             setHeroTotal(prevHeroTotal => prevHeroTotal + parseInt(e.target.attributes.space.value))
-            console.log(e.target.attributes.disabled)
             e.currentTarget.disabled = true
         }
     }
+
+    const resetButton = (e) => {
+        setDisabled(prevDisabled => prevDisabled = "")
+        setHeroTotal(previousTotal => previousTotal = 0)
+        setChosenTroops(previousChosenTroops => previousChosenTroops = [])
+    } 
 
     return (
         <div>
@@ -26,8 +40,9 @@ const Heros = () => {
                     </img>
                 </button>
             )}
+            <button onClick={(e) => resetButton(e)}>Reset</button>
             <p>{heroTotal}</p>
-            <Totals heroTotal={heroTotal} />
+            {console.log(chosenTroops)}
         </div>  
     )
 }

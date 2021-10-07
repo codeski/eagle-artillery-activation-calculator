@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Totals = (props) => {
+const ChosenTroops = (props) => {
     return (    
         <div>
             {console.log(props)}
@@ -8,4 +8,4 @@ const Totals = (props) => {
     )
 }
 
-export default Totals
+export default ChosenTroops
