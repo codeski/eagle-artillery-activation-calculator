@@ -15,7 +15,8 @@ const SiegeMachines = () => {
     const handleClick = (e) => {
         if (!e.currentTarget.disabled) {
 
-            setSiegeTotal(prevSiegeTotal => prevSiegeTotal + parseInt(e.target.attributes.space.value))
+            // setSiegeTotal(prevSiegeTotal => prevSiegeTotal + parseInt(e.target.attributes.space.value))
+            setSiegeTotal(1)
             console.log(e.target.attributes.disabled)
             setDisabled(true) 
         }
@@ -29,8 +30,9 @@ const SiegeMachines = () => {
     return (
         <div>
             {SiegeMachinesData.map(siege =>          
-                <button onClick={(e) => handleClick(e)} disabled={disabled}>
-                    <img 
+                <button key={siege.name} onClick={(e) => handleClick(e)} disabled={disabled}>
+                    <img
+                         
                         src={siege.pic} 
                         alt={siege.name} 
                         space={siege.space}>

@@ -7,7 +7,7 @@ const Spells = () => {
     return (
         <div>
             {SpellsData.map(spell =>                 
-                <button>
+                <button key={spell.name}>
                     <img 
                         src={spell.pic} 
                         alt={spell.name} 
