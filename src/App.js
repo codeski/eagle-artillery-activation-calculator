@@ -6,7 +6,7 @@ import Spells from './components/spells'
 import EagleLvl from './components/eaglelvl'
 import Totals from './components/chosenTroops'
 import Heros from './components/heros'
-import SeigeMachines from './components/seigeMachines'
+import SeigeMachines from './components/siegeMachines'
 
 function App() {
   return (

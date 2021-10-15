@@ -28,8 +28,10 @@ const Troops = () => {
 
     return (
         <div className="troops">
+            <h3>Troops</h3>
             {getElixirTroops()}
             {getDEtroops()}
+            <h3>Super Troops</h3>
             {getSuperTroops()}
         </div>
     )

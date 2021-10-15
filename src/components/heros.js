@@ -31,6 +31,7 @@ const Heros = () => {
 
     return (
         <div>
+            <h3>Heros</h3>
             {HerosData.map(hero =>          
                 <button id="heroButton" key={hero.name} onClick={(e) => handleClick(e, hero)} disabled={disabled}>
                     <img    
@@ -41,7 +42,7 @@ const Heros = () => {
                 </button>
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
-            <p>{heroTotal}</p>
+            <n>Hero Total: {heroTotal}</n>
         </div>  
     )
 }

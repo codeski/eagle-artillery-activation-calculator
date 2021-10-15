@@ -23,16 +23,16 @@ const SiegeMachines = () => {
     }
 
     const resetButton = (e) => {
-        setDisabled(previousDisabled => previousDisabled = false)
-        setSiegeTotal(previousSiegeTotal => previousSiegeTotal = 0)
+        setDisabled(false)
+        setSiegeTotal(0)
     } 
 
     return (
         <div>
+            <h3>Siege Machines</h3>
             {SiegeMachinesData.map(siege =>          
                 <button key={siege.name} onClick={(e) => handleClick(e)} disabled={disabled}>
-                    <img
-                         
+                    <img 
                         src={siege.pic} 
                         alt={siege.name} 
                         space={siege.space}>
@@ -41,7 +41,7 @@ const SiegeMachines = () => {
                 
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
-            <p>{siegeTotal}</p>
+            <n>Siege Total: {siegeTotal}</n>
         </div>
     )
 }

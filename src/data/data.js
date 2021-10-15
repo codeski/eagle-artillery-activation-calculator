@@ -29,18 +29,18 @@ export const DEtroops = [
 ]
 
 export const SpellsData = [
-    {name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, space: 5},
-    {name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, space: 10},
-    {name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, space: 10},
-    {name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, space: 10},
-    {name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, space: 5},
-    {name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, space: 15},
-    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,space: 5},
-    {name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, space: 5},
-    {name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, space: 5},
-    {name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, space: 5},
-    {name: 'Skeleton Spell', pic: '/images/DEspells/Skeleton.webp', spellSpace: 1, space: 5},
-    {name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, space: 5},
+    {name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, quantity: 0, space: 10},
+    {name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, quantity: 0, space: 10},
+    {name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, quantity: 0, space: 10},
+    {name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, quantity: 0, space: 15},
+    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,quantity: 0, space: 5},
+    {name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Skeleton Spell', pic: '/images/DEspells/Skeleton.webp', spellSpace: 1, quantity: 0, space: 5},
+    {name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, quantity: 0, space: 5},
 ]
 
 export const HerosData = [
