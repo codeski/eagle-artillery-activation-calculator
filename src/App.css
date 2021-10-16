@@ -1,6 +1,10 @@
-img {
+.troops {
   height: 50px;
   width: 50px;
+}
+
+h3 {
+  line-height: 0;
 }
 
 button {

@@ -34,7 +34,7 @@ const Heros = () => {
             <h3>Heros</h3>
             {HerosData.map(hero =>          
                 <button id="heroButton" key={hero.name} onClick={(e) => handleClick(e, hero)} disabled={disabled}>
-                    <img    
+                    <img className="troops"   
                         src={hero.pic} 
                         alt={hero.name} 
                         space={hero.space}>

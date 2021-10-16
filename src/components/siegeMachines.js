@@ -32,7 +32,7 @@ const SiegeMachines = () => {
             <h3>Siege Machines</h3>
             {SiegeMachinesData.map(siege =>          
                 <button key={siege.name} onClick={(e) => handleClick(e)} disabled={disabled}>
-                    <img 
+                    <img className="troops"
                         src={siege.pic} 
                         alt={siege.name} 
                         space={siege.space}>

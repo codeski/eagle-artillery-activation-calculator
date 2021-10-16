@@ -47,7 +47,7 @@ const Spells = () => {
             <h3>Spells</h3>
             {SpellsData.map(spell =>                 
                 <button id="spellButton" onClick={ (e) =>handleClick(e, spell)} key={spell.name} disabled={disabled}>
-                    <img 
+                    <img className="troops"
                         src={spell.pic} 
                         alt={spell.name} 
                         space={spell.space}

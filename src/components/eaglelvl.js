@@ -34,6 +34,7 @@ const EagleLvl = () => {
             <input onChange={valueChange} type="range" min="1" max="5" step="1" />
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
+            <br></br>
         </div>
     )
 }

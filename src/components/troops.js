@@ -38,7 +38,7 @@ const Troops = () => {
             <h3>Troops</h3>
             {RegTroops.map(troop =>                 
                 <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
-                    <img 
+                    <img className="troops"
                         src={troop.pic} 
                         alt={troop.name} 
                         space={troop.space}
@@ -49,7 +49,7 @@ const Troops = () => {
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
-            <n>troop Total: {troopTotal}</n>
+            <n>Troop Total: {troopTotal}</n>
         </div>
     )
 }

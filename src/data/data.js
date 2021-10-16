@@ -55,7 +55,7 @@ export const SiegeMachinesData = [
     {name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
 ]
 
-export const SuperTroops = [
+export const SuperTroopData = [
     {name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', quantity: 0, space: 5},
     {name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', quantity: 0, space: 12},
     {name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', quantity: 0, space: 10},
