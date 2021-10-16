@@ -17,16 +17,13 @@ const Spells = () => {
     const handleClick = (e, spell) => {
         if (!e.currentTarget.disabled) {
             if ((spellTotal + spell.space) > 70) {
-                //do nothing //does't add to quantity
+                //does nothing
             } else if ((spellTotal + spell.space) === 70) {
                 setDisabled(true)
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
-                //changes quantity on image // spell.quantity( + 1)
                 spell.quantity = spell.quantity + 1
-                
             } else if ((spellTotal + spell.space) <= 65) {
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
-                //changes quantity on image
                 spell.quantity = spell.quantity + 1
             } 
         } 
@@ -36,6 +33,7 @@ const Spells = () => {
         setDisabled(false)
         setSpellTotal(0)
         setChosenSpells([])
+        SpellsData.forEach(spell => spell.quantity = 0)
     } 
 
     // const disableSomeOrAllSpells = (e) => {

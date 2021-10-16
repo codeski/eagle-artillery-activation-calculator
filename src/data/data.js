@@ -1,31 +1,28 @@
-export const exlixirTroops = [
-    {name: 'Barbarian', pic: '/images/elixirTroops/Barbarian.webp', space: 1}, 
-    {name: 'Archer', pic: '/images/elixirTroops/Archer.webp', space: 1},
-    {name: 'Giant', pic: '/images/elixirTroops/Giant.webp', space: 5},
-    {name: 'Goblin', pic: '/images/elixirTroops/Goblin.webp', space: 1},
-    {name: 'Wall Breaker', pic: '/images/elixirTroops/Wall_Breaker.webp', space: 2},
-    {name: 'Balloon', pic: '/images/elixirTroops/Balloon.webp', space: 5},
-    {name: 'Wizard', pic: '/images/elixirTroops/Wizard.webp', space: 4},
-    {name: 'Healer', pic: '/images/elixirTroops/Healer.webp', space: 14},
-    {name: 'Dragon', pic: '/images/elixirTroops/Dragon.png', space: 20},
-    {name: 'P.E.K.K.A', pic: '/images/elixirTroops/P.E.K.K.A.webp', space: 25},
-    {name: 'Baby Dragon', pic: '/images/elixirTroops/Baby_Dragon.webp', space: 10},
-    {name: 'Miner', pic: '/images/elixirTroops/Miner.webp', space: 6},
-    {name: 'Electro Dragon', pic: '/images/elixirTroops/Electro_Dragon.webp', space: 30},
-    {name: 'Yeti (Yetimite)', pic: '/images/elixirTroops/Yeti.webp', space: 18},
-    {name: 'Dragon Rider', pic: '/images/elixirTroops/Dragon_Rider.webp', space: 25},
-]
-
-export const DEtroops = [
-    {name: 'Minion', pic: '/images/DEtroops/Minion.png', space: 2},
-    {name: 'Hog Rider', pic: '/images/DEtroops/Hog_Rider.png', space: 5},
-    {name: 'Valkyrie', pic: '/images/DEtroops/Valkyrie.png', space: 8},
-    {name: 'Golem', pic: '/images/DEtroops/Golem.png', space: 30},
-    {name: 'Witch', pic: '/images/DEtroops/Witch.png', space: 12},
-    {name: 'Lava Hound', pic: '/images/DEtroops/Lava_Hound.png', space: 30},
-    {name: 'Bowler', pic: '/images/DEtroops/Bowler.webp', space: 6},
-    {name: 'Ice_Golem', pic: '/images/DEtroops/Ice_Golem.png', space: 15},
-    {name: 'Headhunter', pic: '/images/DEtroops/Headhunter.webp', space: 6}
+export const RegTroops = [
+    {name: 'Barbarian', pic: '/images/elixirTroops/Barbarian.webp', quantity: 0, space: 1}, 
+    {name: 'Archer', pic: '/images/elixirTroops/Archer.webp', quantity: 0, space: 1},
+    {name: 'Giant', pic: '/images/elixirTroops/Giant.webp', quantity: 0, space: 5},
+    {name: 'Goblin', pic: '/images/elixirTroops/Goblin.webp', quantity: 0, space: 1},
+    {name: 'Wall Breaker', pic: '/images/elixirTroops/Wall_Breaker.webp', quantity: 0, space: 2},
+    {name: 'Balloon', pic: '/images/elixirTroops/Balloon.webp', quantity: 0, space: 5},
+    {name: 'Wizard', pic: '/images/elixirTroops/Wizard.webp', quantity: 0, space: 4},
+    {name: 'Healer', pic: '/images/elixirTroops/Healer.webp', quantity: 0, space: 14},
+    {name: 'Dragon', pic: '/images/elixirTroops/Dragon.png', quantity: 0, space: 20},
+    {name: 'P.E.K.K.A', pic: '/images/elixirTroops/P.E.K.K.A.webp', quantity: 0, space: 25},
+    {name: 'Baby Dragon', pic: '/images/elixirTroops/Baby_Dragon.webp', quantity: 0, space: 10},
+    {name: 'Miner', pic: '/images/elixirTroops/Miner.webp', quantity: 0, space: 6},
+    {name: 'Electro Dragon', pic: '/images/elixirTroops/Electro_Dragon.webp', quantity: 0, space: 30},
+    {name: 'Yeti (Yetimite)', pic: '/images/elixirTroops/Yeti.webp', quantity: 0, space: 18},
+    {name: 'Dragon Rider', pic: '/images/elixirTroops/Dragon_Rider.webp', quantity: 0, space: 25},
+    {name: 'Minion', pic: '/images/DEtroops/Minion.png', quantity: 0, space: 2},
+    {name: 'Hog Rider', pic: '/images/DEtroops/Hog_Rider.png', quantity: 0, space: 5},
+    {name: 'Valkyrie', pic: '/images/DEtroops/Valkyrie.png', quantity: 0, space: 8},
+    {name: 'Golem', pic: '/images/DEtroops/Golem.png', quantity: 0, space: 30},
+    {name: 'Witch', pic: '/images/DEtroops/Witch.png', quantity: 0, space: 12},
+    {name: 'Lava Hound', pic: '/images/DEtroops/Lava_Hound.png', quantity: 0, space: 30},
+    {name: 'Bowler', pic: '/images/DEtroops/Bowler.webp', quantity: 0, space: 6},
+    {name: 'Ice_Golem', pic: '/images/DEtroops/Ice_Golem.png', quantity: 0, space: 15},
+    {name: 'Headhunter', pic: '/images/DEtroops/Headhunter.webp', quantity: 0, space: 6}
 ]
 
 export const SpellsData = [
@@ -59,16 +56,16 @@ export const SiegeMachinesData = [
 ]
 
 export const SuperTroops = [
-    {name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', space: 5},
-    {name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', space: 12},
-    {name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', space: 10},
-    {name: 'Sneaky Goblin', pic: '/images/SuperTroops/Sneaky_Goblin.webp', space: 3},
-    {name: 'Super Wall Breaker', pic: '/images/SuperTroops/Super_Wall_Breaker.webp', space: 8},
-    {name: 'Rocket Balloon', pic: '/images/SuperTroops/Rocket_Balloon.webp', space: 8},
-    {name: 'Super Wizard', pic: '/images/SuperTroops/Super_Wizard.webp', space: 10},
-    {name: 'Inferno Dragon', pic: '/images/SuperTroops/Inferno_Dragon.webp', space: 15},
-    {name: 'Super Minion', pic: '/images/SuperTroops/Super_Minion.webp', space: 12},
-    {name: 'Super Valkyrie', pic: '/images/SuperTroops/Super_Valkyrie.webp', space: 20},
-    {name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', space: 40},
-    {name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', space: 40}
+    {name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', quantity: 0, space: 5},
+    {name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', quantity: 0, space: 12},
+    {name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', quantity: 0, space: 10},
+    {name: 'Sneaky Goblin', pic: '/images/SuperTroops/Sneaky_Goblin.webp', quantity: 0, space: 3},
+    {name: 'Super Wall Breaker', pic: '/images/SuperTroops/Super_Wall_Breaker.webp', quantity: 0, space: 8},
+    {name: 'Rocket Balloon', pic: '/images/SuperTroops/Rocket_Balloon.webp', quantity: 0, space: 8},
+    {name: 'Super Wizard', pic: '/images/SuperTroops/Super_Wizard.webp', quantity: 0, space: 10},
+    {name: 'Inferno Dragon', pic: '/images/SuperTroops/Inferno_Dragon.webp', quantity: 0, space: 15},
+    {name: 'Super Minion', pic: '/images/SuperTroops/Super_Minion.webp', quantity: 0, space: 12},
+    {name: 'Super Valkyrie', pic: '/images/SuperTroops/Super_Valkyrie.webp', quantity: 0, space: 20},
+    {name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', quantity: 0, space: 40},
+    {name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', quantity: 0, space: 40}
 ]
