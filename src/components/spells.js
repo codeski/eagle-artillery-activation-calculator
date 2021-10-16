@@ -25,6 +25,7 @@ const Spells = () => {
             } else if ((spellTotal + spell.space) <= 65) {
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
+                // console.log('these are chosen', chosenSpells)
             } 
         } 
     }
