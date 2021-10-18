@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { RegTroops } from '../data/data'
+import TroopChild from './troopChild'
 
 const Troops = () => {
     const [chosenTroops, setChosenTroops] = useState([])
@@ -11,12 +12,17 @@ const Troops = () => {
             return a + b.space
         }, 0)
         setTroopTotal(total)
+
+        // const unique = Array.from(new Set(chosenTroops))
+
+        // console.log(unique)
         
     }, [chosenTroops])
 
     const handleClick = (e, troop) => {
         if (!disabled) {
             troop.quantity = troop.quantity + 1
+            
             setChosenTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
         }
     }
@@ -44,12 +50,13 @@ const Troops = () => {
                         space={troop.space}
                         quantity={troop.quantity}>
                     </img>
-                    {troop.quantity}
+                    { troop.quantity ? troop.quantity : null}
                 </button>
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
             <n>Troop Total: {troopTotal}</n>
+            <TroopChild chosenTroops={chosenTroops} />
         </div>
     )
 }

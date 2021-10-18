@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { SpellsData } from '../data/data'
+import TroopChild from './troopChild'
 
 const Spells = () => {
     const [chosenSpells, setChosenSpells] = useState([])
@@ -59,6 +60,7 @@ const Spells = () => {
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
             <n>Spell Total: {spellTotal}</n>
+            <TroopChild chosenSpells={chosenSpells} />
         </div>
 
     )

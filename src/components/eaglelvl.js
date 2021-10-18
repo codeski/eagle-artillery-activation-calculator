@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import TroopChild from './troopChild'
 
 const EagleLvl = () => {
 
@@ -13,6 +14,8 @@ const EagleLvl = () => {
              setActivation(200)
          }
     }
+
+
 
     const imageChange = () => {
         if (rangeValue === "5"){
@@ -30,11 +33,13 @@ const EagleLvl = () => {
 
     return (
         <div>
-            <img src={imageChange()} alt={"Eagle Level " + rangeValue} />
+            <img src={imageChange()} alt={`Eagle Level {rangeValue}`} />
+            <br />
             <input onChange={valueChange} type="range" min="1" max="5" step="1" />
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
-            <br></br>
+            <br />
+            <TroopChild />
         </div>
     )
 }

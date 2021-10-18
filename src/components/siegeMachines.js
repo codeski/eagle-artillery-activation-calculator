@@ -15,9 +15,7 @@ const SiegeMachines = () => {
     const handleClick = (e) => {
         if (!e.currentTarget.disabled) {
 
-            // setSiegeTotal(prevSiegeTotal => prevSiegeTotal + parseInt(e.target.attributes.space.value))
             setSiegeTotal(1)
-            console.log(e.target.attributes.disabled)
             setDisabled(true) 
         }
     }
