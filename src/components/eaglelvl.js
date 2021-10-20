@@ -1,10 +1,15 @@
 import React, {useState} from 'react'
 import TroopChild from './troopChild'
+import {useSelector} from 'react-redux'
 
 const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
     const [activation, setActivation] = useState(200)
+
+    const troops = useSelector(state => { 
+        console.log("global!", state.new)
+    })
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)

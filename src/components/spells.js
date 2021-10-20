@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import { SpellsData } from '../data/data'
-import TroopChild from './troopChild'
+import ChosenTroops from './chosenTroops'
+import { useSelector, useDispatch } from 'react-redux'
+import { getTroops } from '../actions'
 
-const Spells = () => {
+const Spells = (props) => {
     const [chosenSpells, setChosenSpells] = useState([])
     const [spellTotal, setSpellTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let total = chosenSpells.reduce((a, b) => {
@@ -13,17 +17,21 @@ const Spells = () => {
         }, 0)
         setSpellTotal(total)
         
+        
     }, [chosenSpells])
 
     const handleClick = (e, spell) => {
         if (!e.currentTarget.disabled) {
+            
             if ((spellTotal + spell.space) > 70) {
                 //does nothing
             } else if ((spellTotal + spell.space) === 70) {
+                dispatch(getTroops(spell))
                 setDisabled(true)
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
             } else if ((spellTotal + spell.space) <= 65) {
+                dispatch(getTroops(spell))
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
                 // console.log('these are chosen', chosenSpells)
@@ -60,7 +68,7 @@ const Spells = () => {
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
             <n>Spell Total: {spellTotal}</n>
-            <TroopChild chosenSpells={chosenSpells} />
+            <ChosenTroops choseSpells={chosenSpells} {...props} />
         </div>
 
     )
