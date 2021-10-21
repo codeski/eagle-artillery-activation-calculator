@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import { SiegeMachinesData } from '../data/data'
-// import ChosenTroops from './chosenTroops'
 
 const SiegeMachines = () => {
 
@@ -9,12 +8,10 @@ const SiegeMachines = () => {
     // const [addSiege, setAddSiege] = useState([])
 
     // useEffect(()=>{
-    //     console.log(<ChosenTroops />)
     // })
 
     const handleClick = (e) => {
         if (!e.currentTarget.disabled) {
-
             setSiegeTotal(1)
             setDisabled(true) 
         }

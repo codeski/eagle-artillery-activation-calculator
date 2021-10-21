@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import TroopChild from './troopChild'
 import {useSelector} from 'react-redux'
 
 const EagleLvl = () => {
@@ -8,7 +7,7 @@ const EagleLvl = () => {
     const [activation, setActivation] = useState(200)
 
     const troops = useSelector(state => { 
-        console.log("global!", state.new)
+        console.log("global!", state)
     })
 
     const valueChange = async (event) => {
@@ -44,7 +43,6 @@ const EagleLvl = () => {
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
             <br />
-            <TroopChild />
         </div>
     )
 }

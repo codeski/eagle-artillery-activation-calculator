@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { RegTroops } from '../data/data'
-// import ChosenTroops from './chosenTroops'
 import { useSelector, useDispatch } from 'react-redux'
-import { getTroops } from '../actions'
+import { addTroops, resetTroops } from '../actions'
 
 const Troops = () => {
     const [chosenTroops, setChosenTroops] = useState([])
@@ -10,6 +9,10 @@ const Troops = () => {
     const [disabled, setDisabled] = useState(false)
 
     const dispatch = useDispatch()
+
+    const troops = useSelector(state => { 
+        return state.troops
+    })
     
 
     useEffect(() => {
@@ -19,7 +22,6 @@ const Troops = () => {
         setTroopTotal(total)
         
         // const unique = Array.from(new Set(chosenTroops))
-
         // console.log(unique)
         
     }, [chosenTroops])
@@ -29,7 +31,7 @@ const Troops = () => {
             troop.quantity = troop.quantity + 1
             
             setChosenTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
-            dispatch(getTroops(troop))
+            dispatch(addTroops(troop))
         }
     }
 
@@ -37,12 +39,17 @@ const Troops = () => {
         setDisabled(false)
         setTroopTotal(0)
         setChosenTroops([])
+        dispatch(resetTroops())
         RegTroops.forEach(troop => troop.quantity = 0)
     } 
 
     // const disableSomeOrAllTroops = (e) => {
     //     //select Troops from the DOM
     //     //iterate through and disable
+    // }
+
+    // const troopTotal = () => {
+
     // }
 
     return (
@@ -62,7 +69,6 @@ const Troops = () => {
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
             <n>Troop Total: {troopTotal}</n>
-            {/* <ChosenTroops choseTroops={chosenTroops} {...props} /> */}
         </div>
     )
 }

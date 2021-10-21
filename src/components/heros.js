@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import { HerosData } from '../data/data'
-// import ChosenTroops from './chosenTroops'
+import { useSelector, useDispatch } from 'react-redux'
+import { addHero } from '../actions'
 
 const Heros = () => {
     
     const [heroTotal, setHeroTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
     const [chosenTroops, setChosenTroops] = useState([])
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let total = chosenTroops.reduce((a, b) => {
@@ -19,6 +22,7 @@ const Heros = () => {
         if  (!e.currentTarget.disabled) {
             e.currentTarget.disabled = true
             setChosenTroops(prevChosenTroops => prevChosenTroops.concat(hero))
+            dispatch(addHero(hero))
         } 
     }
 

@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { SpellsData } from '../data/data'
-import ChosenTroops from './chosenTroops'
 import { useSelector, useDispatch } from 'react-redux'
-import { getTroops } from '../actions'
+import { addSpells, resetSpells } from '../actions'
 
 const Spells = (props) => {
     const [chosenSpells, setChosenSpells] = useState([])
@@ -26,12 +25,12 @@ const Spells = (props) => {
             if ((spellTotal + spell.space) > 70) {
                 //does nothing
             } else if ((spellTotal + spell.space) === 70) {
-                dispatch(getTroops(spell))
+                dispatch(addSpells(spell))
                 setDisabled(true)
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
             } else if ((spellTotal + spell.space) <= 65) {
-                dispatch(getTroops(spell))
+                dispatch(addSpells(spell))
                 setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
                 // console.log('these are chosen', chosenSpells)
@@ -43,6 +42,7 @@ const Spells = (props) => {
         setDisabled(false)
         setSpellTotal(0)
         setChosenSpells([])
+        dispatch(resetSpells())
         SpellsData.forEach(spell => spell.quantity = 0)
     } 
 
@@ -62,13 +62,12 @@ const Spells = (props) => {
                         space={spell.space}
                         quantity={spell.quantity}>
                     </img>
-                    {spell.quantity}
+                    { spell.quantity ? spell.quantity : null}
                 </button>
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset</button>
             <n>Spell Total: {spellTotal}</n>
-            <ChosenTroops choseSpells={chosenSpells} {...props} />
         </div>
 
     )
