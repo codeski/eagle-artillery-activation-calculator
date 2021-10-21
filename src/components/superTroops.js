@@ -1,10 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import { SuperTroopData } from '../data/data'
+import { useSelector, useDispatch } from 'react-redux'
+import { addSuperTroop, resetSuperTroops } from '../actions'
 
 const SuperTroops = () => {
     const [chosenSuperTroops, setChosenSuperTroops] = useState([])
     const [superTroopTotal, setSuperTroopTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         let total = chosenSuperTroops.reduce((a, b) => {
@@ -18,6 +22,7 @@ const SuperTroops = () => {
         if (!disabled) {
             troop.quantity = troop.quantity + 1
             setChosenSuperTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
+            dispatch(addSuperTroop(troop))
         }
     }
 
@@ -25,6 +30,7 @@ const SuperTroops = () => {
         setDisabled(false)
         setSuperTroopTotal(0)
         setChosenSuperTroops([])
+        dispatch(resetSuperTroops())
         SuperTroopData.forEach(troop => troop.quantity = 0)
     } 
 

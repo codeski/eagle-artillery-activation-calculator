@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { HerosData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
-import { addHero } from '../actions'
+import { addHero, resetHeros } from '../actions'
 
 const Heros = () => {
     
@@ -31,6 +31,7 @@ const Heros = () => {
         selected.forEach(troop => troop.disabled = false)
         setHeroTotal(0)
         setChosenTroops([])
+        dispatch(resetHeros())
     } 
 
     return (

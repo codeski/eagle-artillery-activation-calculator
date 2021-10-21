@@ -9,7 +9,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case "ADDTROOP":
-            console.log("reducer", action.payload)
+            // console.log("reducer", action.payload)
             return {...state, troops: [...state.troops, action.payload]}
         case "RESETTROOPS":
             return {...state, troops: [...state.troops = []]}
@@ -25,7 +25,8 @@ const reducer = (state = initialState, action) => {
             return {...state, siege: [...state.siege, action.payload]}
         case "RESETSIEGE":
             return {...state, siege: [...state.siege = []]}
-        case "ADDSUPER":
+        case "ADDSUPERTROOP":
+            console.log("reducer", action.payload)
             return {...state, superTroops: [...state.superTroops, action.payload]}
         case "RESETSUPERTROOPS":
             return {...state, superTroops: [...state.superTroops = []]}   

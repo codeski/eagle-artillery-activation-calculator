@@ -32,6 +32,7 @@ export const resetSiege = () => (dispatch) => {
 }
 
 export const addSuperTroop = (superTroop) => (dispatch) => {
+    // console.log("action", superTroop)
     dispatch({type: "ADDSUPERTROOP", payload: superTroop})
 }
 
