@@ -1,14 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useSelector} from 'react-redux'
 
 const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
     const [activation, setActivation] = useState(200)
+    const [grandTotal, setGrandTotal] = useState(0)
+    const [chosenArmy, setChosenArmy] = useState([])
 
-    const troops = useSelector(state => { 
-        console.log("global!", state)
-    })
+    // useEffect(() => {
+    //     entireArmy.
+    // })
+    
+    const entireArmy = useSelector(state => { return state.troops.concat(state.heros, state.superTroops, state.spells, state.siege)})
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
@@ -18,8 +22,6 @@ const EagleLvl = () => {
              setActivation(200)
          }
     }
-
-
 
     const imageChange = () => {
         if (rangeValue === "5"){
@@ -35,6 +37,13 @@ const EagleLvl = () => {
         }
     }
 
+    const addItUp = () => {
+        console.log("does it work", entireArmy)
+        return entireArmy.reduce((a, b) => { return a + b.space }, 0)
+    }
+
+    // const unique = entireArmy.from(new Set(chosenArmy))
+
     return (
         <div>
             <img src={imageChange()} alt={`Eagle Level {rangeValue}`} />
@@ -42,6 +51,10 @@ const EagleLvl = () => {
             <input onChange={valueChange} type="range" min="1" max="5" step="1" />
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
+            <h3>{addItUp()}</h3>
+            
+            {/* {unique.map(troop => <img className="troops" src={troop.pic} alt={troop.name} ></img>)} */}
+            
             <br />
         </div>
     )
