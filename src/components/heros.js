@@ -46,7 +46,7 @@ const Heros = () => {
                     </img>
                 </button>
             )}
-            <button onClick={(e) => resetButton(e)}>Reset</button>
+            <button onClick={(e) => resetButton(e)}>Reset Heros</button>
             <n>Hero Total: {heroTotal}</n>
         </div>  
     )

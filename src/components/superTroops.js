@@ -54,7 +54,7 @@ const SuperTroops = () => {
                 </button>
                  
             )}
-            <button onClick={(e) => resetButton(e)}>Reset</button>
+            <button onClick={(e) => resetButton(e)}>Reset Super Troops</button>
             <n>Super Troop Total: {superTroopTotal}</n>
         </div>
     )

@@ -42,7 +42,22 @@ const EagleLvl = () => {
         return entireArmy.reduce((a, b) => { return a + b.space }, 0)
     }
 
-    // const unique = entireArmy.from(new Set(chosenArmy))
+    const uniqueArmy = () => {
+        if (entireArmy){
+            let unique = [...new Set(entireArmy)]
+            return unique.map(troop => {
+                    return (
+                        <button>
+                            <img className="troops" src={troop.pic} alt={troop.name} ></img>
+                            {troop.quantity}
+                        </button>
+
+                    )
+            })
+        }
+    }
+
+    
 
     return (
         <div>
@@ -53,7 +68,7 @@ const EagleLvl = () => {
             <h3>Activates @ {activation}</h3>
             <h3>{addItUp()}</h3>
             
-            {/* {unique.map(troop => <img className="troops" src={troop.pic} alt={troop.name} ></img>)} */}
+            {uniqueArmy()}
             
             <br />
         </div>

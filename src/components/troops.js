@@ -67,7 +67,7 @@ const Troops = () => {
                 </button>
                  
             )}
-            <button onClick={(e) => resetButton(e)}>Reset</button>
+            <button onClick={(e) => resetButton(e)}>Reset Troops</button>
             <n>Troop Total: {troopTotal}</n>
         </div>
     )

@@ -41,7 +41,7 @@ const SiegeMachines = () => {
                 </button>
                 
             )}
-            <button onClick={(e) => resetButton(e)}>Reset</button>
+            <button onClick={(e) => resetButton(e)}>Reset Siege</button>
             <n>Siege Total: {siegeTotal}</n>
         </div>
     )
