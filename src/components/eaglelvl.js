@@ -48,7 +48,7 @@ const EagleLvl = () => {
             return unique.map(troop => {
                     return (
                         <button>
-                            <img className="troops" src={troop.pic} alt={troop.name} ></img>
+                            <img onClick={troop => troop.quantity - 1} className="troops" src={troop.pic} alt={troop.name} ></img>
                             {troop.quantity}
                         </button>
 
@@ -56,6 +56,7 @@ const EagleLvl = () => {
             })
         }
     }
+
 
     
 
@@ -66,7 +67,7 @@ const EagleLvl = () => {
             <input onChange={valueChange} type="range" min="1" max="5" step="1" />
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
-            <h3>{addItUp()}</h3>
+            <h1>{addItUp()}/{activation}</h1>
             
             {uniqueArmy()}
             
