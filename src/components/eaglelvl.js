@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
+import {removeTroop} from '../actions'
 
 const EagleLvl = () => {
 
@@ -11,6 +12,8 @@ const EagleLvl = () => {
     // useEffect(() => {
     //     entireArmy.
     // })
+
+    const dispatch = useDispatch()
     
     const entireArmy = useSelector(state => { return state.troops.concat(state.heros, state.superTroops, state.spells, state.siege)})
 
@@ -42,13 +45,18 @@ const EagleLvl = () => {
         return entireArmy.reduce((a, b) => { return a + b.space }, 0)
     }
 
+    const handleClick = (e, troop) => {
+        troop.quantity = troop.quantity - 1
+        dispatch(removeTroop(troop))
+    }
+
     const uniqueArmy = () => {
         if (entireArmy){
             let unique = [...new Set(entireArmy)]
             return unique.map(troop => {
                     return (
                         <button>
-                            <img onClick={troop => troop.quantity - 1} className="troops" src={troop.pic} alt={troop.name} ></img>
+                            <img onClick={ (e) => handleClick(e, troop) } className="troops" src={troop.pic} alt={troop.name} ></img>
                             {troop.quantity}
                         </button>
 

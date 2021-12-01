@@ -40,3 +40,6 @@ export const resetSuperTroops = () => (dispatch) => {
     dispatch({type: "RESETSUPERTROOPS"})
 }
 
+export const removeTroop = (troop) => (dispatch) => {
+    dispatch({type: "REMOVETROOP", payload: troop})
+}
