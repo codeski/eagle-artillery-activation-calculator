@@ -35,10 +35,16 @@ const reducer = (state = initialState, action) => {
             console.log(troop)
 
             // find first object that matches and remove it from the array
-            let newTroops = state.troops.filter(troop => troop.type !== troop)
-
-
-            return {...state, troops: [...state.troops, newTroops]}
+            if (troop === "troops"){
+                let newTroops = state.troops.filter(troop => troop.type !== troop)
+                newTroops.pop()
+                return {...state, troops: newTroops}
+            } else if (troop === "spells"){
+                let newSpells = state.spells.filter(spell => spell.type !== spell)
+                newSpells.pop()
+                return {...state, spells: newSpells}
+            } 
+            return state     
         default:
             return state
     }

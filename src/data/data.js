@@ -26,22 +26,22 @@ export const RegTroops = [
 ]
 
 export const SpellsData = [
-    {name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, quantity: 0, space: 10},
-    {name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, quantity: 0, space: 10},
-    {name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, quantity: 0, space: 10},
-    {name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, quantity: 0, space: 15},
-    {name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,quantity: 0, space: 5},
-    {name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Skeleton Spell', pic: '/images/DEspells/Skeleton.webp', spellSpace: 1, quantity: 0, space: 5},
-    {name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Lightning Spell', pic: '/images/elixirSpells/Lightning.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Healing Spell', pic: '/images/elixirSpells/Healing.webp', spellSpace: 2, quantity: 0, space: 10},
+    {type: "spells", name: 'Rage Spell', pic: '/images/elixirSpells/Rage.webp', spellSpace: 2, quantity: 0, space: 10},
+    {type: "spells", name: 'Jump Spell', pic: '/images/elixirSpells/Jump.webp', spellSpace: 2, quantity: 0, space: 10},
+    {type: "spells", name: 'Freeze Spell', pic: '/images/elixirSpells/Freeze.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Clone Spell', pic: '/images/elixirSpells/Clone.webp', spellSpace: 3, quantity: 0, space: 15},
+    {type: "spells", name: 'Invisibility Spell', pic: '/images/elixirSpells/Invisibility.webp', spellSpace: 1,quantity: 0, space: 5},
+    {type: "spells", name: 'Poison Spell', pic: '/images/DEspells/Poison.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Earthquake Spell', pic: '/images/DEspells/Earthquake.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Haste Spell', pic: '/images/DEspells/Haste.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Skeleton Spell', pic: '/images/DEspells/Skeleton.webp', spellSpace: 1, quantity: 0, space: 5},
+    {type: "spells", name: 'Bat Spell', pic: '/images/DEspells/Bat.webp', spellSpace: 1, quantity: 0, space: 5},
 ]
 
 export const HerosData = [
-    {name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
+    {type: "hero", name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
     {name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
     {name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
     {name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
