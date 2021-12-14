@@ -20,6 +20,7 @@ const Heros = () => {
 
     const handleClick = (e, hero) => {
         if  (!e.currentTarget.disabled) {
+            hero.quantity = hero.quantity + 1
             e.currentTarget.disabled = true
             setChosenTroops(prevChosenTroops => prevChosenTroops.concat(hero))
             dispatch(addHero(hero))

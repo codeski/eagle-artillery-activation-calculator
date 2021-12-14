@@ -41,10 +41,10 @@ export const SpellsData = [
 ]
 
 export const HerosData = [
-    {type: "heros", name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
-    {type: "heros", name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
-    {type: "heros", name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
-    {type: "heros", name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
+    {type: "heros", name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25, quantity: 0},
+    {type: "heros", name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25, quantity: 0},
+    {type: "heros", name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25, quantity: 0},
+    {type: "heros", name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25, quantity: 0}
 ]
 
 export const SiegeMachinesData = [
