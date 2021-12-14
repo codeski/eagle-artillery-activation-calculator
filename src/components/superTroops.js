@@ -10,26 +10,28 @@ const SuperTroops = () => {
 
     const dispatch = useDispatch()
 
+    const superTroops = useSelector(state => state.superTroops)
+
     useEffect(() => {
-        let total = chosenSuperTroops.reduce((a, b) => {
-            return a + b.space
+        let total = superTroops.reduce((a, b) => {
+            return a + b.space * b.quantity
         }, 0)
         setSuperTroopTotal(total)
         
-    }, [chosenSuperTroops])
+    }, [superTroops])
 
     const handleClick = (e, troop) => {
         if (!disabled) {
             troop.quantity = troop.quantity + 1
-            setChosenSuperTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
+            // setChosenSuperTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
             dispatch(addSuperTroop(troop))
         }
     }
 
     const resetButton = (e) => {
         setDisabled(false)
-        setSuperTroopTotal(0)
-        setChosenSuperTroops([])
+        // setSuperTroopTotal(0)
+        // setChosenSuperTroops([])
         dispatch(resetSuperTroops())
         SuperTroopData.forEach(troop => troop.quantity = 0)
     } 

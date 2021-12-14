@@ -6,8 +6,8 @@ const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
     const [activation, setActivation] = useState(200)
-    const [grandTotal, setGrandTotal] = useState(0)
-    const [chosenArmy, setChosenArmy] = useState([])
+    // const [grandTotal, setGrandTotal] = useState(0)
+    // const [chosenArmy, setChosenArmy] = useState([])
 
     // useEffect(() => {
     //     entireArmy.

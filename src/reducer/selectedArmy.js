@@ -9,11 +9,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type){
         case "ADDTROOP":
-            let revised = [...state.troops, action.payload]
-            // console.log("revised", revised)
-            let unique = [...new Set(revised)]
-            // console.log("unique", unique)
-            return {...state, troops: unique}
+            let revisedTroops = [...state.troops, action.payload]
+            let uniqueTroops = [...new Set(revisedTroops)]
+            return {...state, troops: uniqueTroops}
         case "RESETTROOPS":
             return {...state, troops: [...state.troops = []]}
         case "ADDSPELL":
@@ -29,8 +27,9 @@ const reducer = (state = initialState, action) => {
         case "RESETSIEGE":
             return {...state, siege: [...state.siege = []]}
         case "ADDSUPERTROOP":
-            console.log("reducer", action.payload)
-            return {...state, superTroops: [...state.superTroops, action.payload]}
+            let revisedSuper = [...state.superTroops, action.payload]
+            let uniqueSuper = [...new Set(revisedSuper)]
+            return {...state, superTroops: uniqueSuper}
         case "RESETSUPERTROOPS":
             return {...state, superTroops: [...state.superTroops = []]} 
         case "REMOVETROOP":
@@ -39,11 +38,10 @@ const reducer = (state = initialState, action) => {
 
             // find first object that matches and remove it from the array
             if (troop === "troops"){
-                if(action.payload.quantity > 0){
+                if (action.payload.quantity > 0) {
                     return {...state, troops: [...state.troops]}
                 } else { 
                     let theTroops = state.troops.filter(troop => action.payload !== troop)
-                    console.log("theTroops", theTroops)
                     return {...state, troops: theTroops}
                 }
             } else if (troop === "spells"){
@@ -59,9 +57,12 @@ const reducer = (state = initialState, action) => {
                 newSiege.pop()
                 return {...state, siege: newSiege}
             } else if (troop === "superTroops"){
-                let newSuperTroops = state.superTroops.filter(superTroop => action.payload !== superTroop)
-                newSuperTroops.pop()
-                return {...state, superTroops: newSuperTroops}
+                if (action.payload.quantity > 0) {
+                    return {...state, superTroops: [...state.superTroops]}
+                } else { 
+                    let theTroops = state.superTroops.filter(troop => action.payload !== troop)
+                    return {...state, superTroops: theTroops}
+                }
             }
 
             return state     
