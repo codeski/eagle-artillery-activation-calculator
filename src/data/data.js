@@ -48,11 +48,11 @@ export const HerosData = [
 ]
 
 export const SiegeMachinesData = [
-    {type: "siege", name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1},
-    {type: "siege", name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1},
-    {type: "siege", name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1},
-    {type: "siege", name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1},
-    {type: "siege", name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
+    {type: "siege", name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1, quantity: 0},
+    {type: "siege", name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1, quantity: 0},
+    {type: "siege", name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1, quantity: 0},
+    {type: "siege", name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1, quantity: 0},
+    {type: "siege", name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1, quantity: 0}
 ]
 
 export const SuperTroopData = [
