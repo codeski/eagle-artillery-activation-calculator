@@ -18,6 +18,10 @@ const Heros = () => {
             return a + b.space
         }, 0)
         setHeroTotal(total)
+        if (heros.length === 0) {
+            let selected = document.querySelectorAll(".heroButton")
+            selected.forEach(troop => troop.disabled = false)
+        }
     },[heros])
 
     const handleClick = (e, hero) => {

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {removeTroop} from '../actions'
+import {removeTroop, resetArmy} from '../actions'
 
 const EagleLvl = () => {
 
@@ -15,7 +15,7 @@ const EagleLvl = () => {
 
     const dispatch = useDispatch()
     
-    const entireArmy = useSelector(state => { return state.troops.concat(state.heros, state.superTroops, state.spells, state.siege)})
+    const entireArmy = useSelector(state => { return state.troops.concat(state.superTroops, state.spells, state.heros, state.siege)})
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
@@ -73,6 +73,10 @@ const EagleLvl = () => {
         }
     }
 
+    const reset = () => {
+        dispatch(resetArmy())
+    }
+
 
     
 
@@ -86,6 +90,7 @@ const EagleLvl = () => {
             <h1>{addItUp()}/{activation}</h1>
             
             {uniqueArmy()}
+            <button onClick={() => reset()}>Reset Army</button>
             
             <br />
         </div>

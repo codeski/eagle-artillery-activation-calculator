@@ -8,6 +8,8 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch(action.type){
+        case "RESETARMY":
+            return {...state, troops: [], spells: [], heros: [], siege: [], superTroops: []}
         case "ADDTROOP":
             let revisedTroops = [...state.troops, action.payload]
             let uniqueTroops = [...new Set(revisedTroops)]
@@ -53,8 +55,6 @@ const reducer = (state = initialState, action) => {
                 }
             } else if (troop === "heros"){
                 let newHeros = state.heros.filter(hero => action.payload !== hero)
-                // let selected = document.querySelectorAll("#heroButton")
-                // console.log("heros", selected)
                 return {...state, heros: newHeros}
             } else if (troop === "siege"){
                 let newSiege = state.siege.filter(siege => action.payload !== siege)
@@ -68,8 +68,7 @@ const reducer = (state = initialState, action) => {
                     return {...state, superTroops: theTroops}
                 }
             }
-
-            return state     
+            return state 
         default:
             return state
     }
