@@ -53,7 +53,8 @@ const reducer = (state = initialState, action) => {
                 }
             } else if (troop === "heros"){
                 let newHeros = state.heros.filter(hero => action.payload !== hero)
-                newHeros.pop()
+                // let selected = document.querySelectorAll("#heroButton")
+                // console.log("heros", selected)
                 return {...state, heros: newHeros}
             } else if (troop === "siege"){
                 let newSiege = state.siege.filter(siege => action.payload !== siege)

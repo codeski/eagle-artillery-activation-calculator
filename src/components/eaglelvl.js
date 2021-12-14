@@ -46,8 +46,18 @@ const EagleLvl = () => {
 
     const handleClick = (e, troop) => {
         troop.quantity = troop.quantity - 1
-        
         dispatch(removeTroop(troop))
+        if (troop.type === 'heros') {
+            let selected = document.querySelectorAll(".heroButton")
+            console.log ("heros", troop.name)
+            selected.forEach(hero => {
+                console.log("hero", hero.id)
+                // debugger
+                if (troop.name === hero.id){
+                    hero.disabled = false
+                }
+            })
+        } 
     }
 
     const uniqueArmy = () => {
@@ -56,7 +66,7 @@ const EagleLvl = () => {
                     return (
                         <button>
                             <img onClick={ (e) => handleClick(e, troop) } className="troops" src={troop.pic} alt={troop.name} ></img>
-                            {troop.quantity}
+                            { troop.type === "troops" || troop.type === "spells" || troop.type === "superTroops" ? troop.quantity : null}
                         </button>
                     )
             })
