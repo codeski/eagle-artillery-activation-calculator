@@ -41,25 +41,23 @@ const EagleLvl = () => {
     }
 
     const addItUp = () => {
-        console.log("does it work", entireArmy)
-        return entireArmy.reduce((a, b) => { return a + b.space }, 0)
+        return entireArmy.reduce((a, b) => { return a + b.space * b.quantity}, 0)
     }
 
     const handleClick = (e, troop) => {
         troop.quantity = troop.quantity - 1
+        
         dispatch(removeTroop(troop))
     }
 
     const uniqueArmy = () => {
         if (entireArmy){
-            let unique = [...new Set(entireArmy)]
-            return unique.map(troop => {
+            return entireArmy.map(troop => {
                     return (
                         <button>
                             <img onClick={ (e) => handleClick(e, troop) } className="troops" src={troop.pic} alt={troop.name} ></img>
                             {troop.quantity}
                         </button>
-
                     )
             })
         }

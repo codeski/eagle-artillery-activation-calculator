@@ -41,31 +41,31 @@ export const SpellsData = [
 ]
 
 export const HerosData = [
-    {type: "hero", name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
-    {name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
-    {name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
-    {name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
+    {type: "heros", name: 'Barbarian King', pic: '/images/Heros/Barbarian_King.png', space: 25},
+    {type: "heros", name: 'Archer Queen', pic: '/images/Heros/Archer_Queen.jpg', space: 25},
+    {type: "heros", name: 'Grand Warden', pic: '/images/Heros/Grand_Warden.png', space: 25},
+    {type: "heros", name: 'Royal Champion', pic: '/images/Heros/Royal_Champion.jpg', space: 25}
 ]
 
 export const SiegeMachinesData = [
-    {name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1},
-    {name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1},
-    {name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1},
-    {name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1},
-    {name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
+    {type: "siege", name: 'Wall Wrecker', pic: '/images/SiegeMachines/Wall_Wrecker.webp', space: 1},
+    {type: "siege", name: 'Battle Blimp', pic: '/images/SiegeMachines/Battle_Blimp.webp', space: 1},
+    {type: "siege", name: 'Stone Slammer', pic: '/images/SiegeMachines/Stone_Slammer.webp', space: 1},
+    {type: "siege", name: 'Siege Barracks', pic: '/images/SiegeMachines/Siege_Barracks.webp', space: 1},
+    {type: "siege", name: 'Log Launcher', pic: '/images/SiegeMachines/Log_Launcher.webp', space: 1}
 ]
 
 export const SuperTroopData = [
-    {name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', quantity: 0, space: 5},
-    {name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', quantity: 0, space: 12},
-    {name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', quantity: 0, space: 10},
-    {name: 'Sneaky Goblin', pic: '/images/SuperTroops/Sneaky_Goblin.webp', quantity: 0, space: 3},
-    {name: 'Super Wall Breaker', pic: '/images/SuperTroops/Super_Wall_Breaker.webp', quantity: 0, space: 8},
-    {name: 'Rocket Balloon', pic: '/images/SuperTroops/Rocket_Balloon.webp', quantity: 0, space: 8},
-    {name: 'Super Wizard', pic: '/images/SuperTroops/Super_Wizard.webp', quantity: 0, space: 10},
-    {name: 'Inferno Dragon', pic: '/images/SuperTroops/Inferno_Dragon.webp', quantity: 0, space: 15},
-    {name: 'Super Minion', pic: '/images/SuperTroops/Super_Minion.webp', quantity: 0, space: 12},
-    {name: 'Super Valkyrie', pic: '/images/SuperTroops/Super_Valkyrie.webp', quantity: 0, space: 20},
-    {name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', quantity: 0, space: 40},
-    {name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', quantity: 0, space: 40}
+    {type: "superTroops", name: 'Super Barbarian', pic: '/images/SuperTroops/Super_Barbarian.webp', quantity: 0, space: 5},
+    {type: "superTroops", name: 'Super Archer', pic: '/images/SuperTroops/Super_Archer.webp', quantity: 0, space: 12},
+    {type: "superTroops", name: 'Super Giant', pic: '/images/SuperTroops/Super_Giant.webp', quantity: 0, space: 10},
+    {type: "superTroops", name: 'Sneaky Goblin', pic: '/images/SuperTroops/Sneaky_Goblin.webp', quantity: 0, space: 3},
+    {type: "superTroops", name: 'Super Wall Breaker', pic: '/images/SuperTroops/Super_Wall_Breaker.webp', quantity: 0, space: 8},
+    {type: "superTroops", name: 'Rocket Balloon', pic: '/images/SuperTroops/Rocket_Balloon.webp', quantity: 0, space: 8},
+    {type: "superTroops", name: 'Super Wizard', pic: '/images/SuperTroops/Super_Wizard.webp', quantity: 0, space: 10},
+    {type: "superTroops", name: 'Inferno Dragon', pic: '/images/SuperTroops/Inferno_Dragon.webp', quantity: 0, space: 15},
+    {type: "superTroops", name: 'Super Minion', pic: '/images/SuperTroops/Super_Minion.webp', quantity: 0, space: 12},
+    {type: "superTroops", name: 'Super Valkyrie', pic: '/images/SuperTroops/Super_Valkyrie.webp', quantity: 0, space: 20},
+    {type: "superTroops", name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', quantity: 0, space: 40},
+    {type: "superTroops", name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', quantity: 0, space: 40}
 ]

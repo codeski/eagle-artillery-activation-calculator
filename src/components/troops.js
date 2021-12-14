@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addTroops, resetTroops } from '../actions'
 
 const Troops = () => {
-    const [chosenTroops, setChosenTroops] = useState([])
+    // const [chosenTroops, setChosenTroops] = useState([])
     const [troopTotal, setTroopTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
 
@@ -16,29 +16,28 @@ const Troops = () => {
     
 
     useEffect(() => {
-        let total = chosenTroops.reduce((a, b) => {
-            return a + b.space
+        let total = troops.reduce((a, b) => {
+            return a + b.space * b.quantity
         }, 0)
         setTroopTotal(total)
         
         // const unique = Array.from(new Set(chosenTroops))
         // console.log(unique)
         
-    }, [chosenTroops])
+    }, [troops])
 
     const handleClick = (e, troop) => {
         if (!disabled) {
             troop.quantity = troop.quantity + 1
-            
-            setChosenTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
+            // setChosenTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
             dispatch(addTroops(troop))
         }
     }
 
     const resetButton = (e) => {
         setDisabled(false)
-        setTroopTotal(0)
-        setChosenTroops([])
+        // setTroopTotal(0)
+        // setChosenTroops([])
         dispatch(resetTroops())
         RegTroops.forEach(troop => troop.quantity = 0)
     } 
