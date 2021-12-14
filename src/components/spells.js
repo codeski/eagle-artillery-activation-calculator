@@ -3,37 +3,39 @@ import { SpellsData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addSpells, resetSpells } from '../actions'
 
-const Spells = (props) => {
-    const [chosenSpells, setChosenSpells] = useState([])
+const Spells = () => {
+
     const [spellTotal, setSpellTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
 
     const dispatch = useDispatch()
 
+    const spells = useSelector(state => state.spells)   
+
     useEffect(() => {
-        let total = chosenSpells.reduce((a, b) => {
-            return a + b.space
+        let total = spells.reduce((a, b) => {
+            return a + b.space * b.quantity
         }, 0)
         setSpellTotal(total)
+        if (total >= 70) {
+            setDisabled(true)
+        } else {
+            setDisabled(false)
+        }
         
-        
-    }, [chosenSpells])
+    }, [spells])
 
     const handleClick = (e, spell) => {
-        if (!e.currentTarget.disabled) {
-            
+        if (!e.currentTarget.disabled) { 
             if ((spellTotal + spell.space) > 70) {
                 //does nothing
             } else if ((spellTotal + spell.space) === 70) {
+                spell.quantity = spell.quantity + 1
                 dispatch(addSpells(spell))
                 setDisabled(true)
-                setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
-                spell.quantity = spell.quantity + 1
             } else if ((spellTotal + spell.space) <= 65) {
-                dispatch(addSpells(spell))
-                setChosenSpells(prevChosenSpells => prevChosenSpells.concat(spell))
                 spell.quantity = spell.quantity + 1
-                // console.log('these are chosen', chosenSpells)
+                dispatch(addSpells(spell))
             } 
         } 
     }
@@ -41,7 +43,6 @@ const Spells = (props) => {
     const resetButton = (e) => {
         setDisabled(false)
         setSpellTotal(0)
-        setChosenSpells([])
         dispatch(resetSpells())
         SpellsData.forEach(spell => spell.quantity = 0)
     } 
