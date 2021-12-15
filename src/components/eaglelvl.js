@@ -20,6 +20,14 @@ const EagleLvl = () => {
         setArmyTotal(total)
     }, [entireArmy])
 
+    useEffect (() => {
+        if (armyTotal >= activation) {
+            //disable all buttons
+            //activation written 
+        }
+
+    }, [armyTotal])
+
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
          if (event.target.value === '1' || event.target.value === '2') {
@@ -86,6 +94,7 @@ const EagleLvl = () => {
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
             <h1>{armyTotal}/{activation}</h1>
+            {armyTotal >= activation ? <h1>Eagle Artillery Activated</h1> : null}
             
             {uniqueArmy()}
             <button onClick={() => reset()}>Reset Army</button>
