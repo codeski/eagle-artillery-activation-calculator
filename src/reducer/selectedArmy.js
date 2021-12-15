@@ -57,9 +57,7 @@ const reducer = (state = initialState, action) => {
                 let newHeros = state.heros.filter(hero => action.payload !== hero)
                 return {...state, heros: newHeros}
             } else if (troop === "siege"){
-                let newSiege = state.siege.filter(siege => action.payload !== siege)
-                newSiege.pop()
-                return {...state, siege: newSiege}
+                return {...state, siege: []}
             } else if (troop === "superTroops"){
                 if (action.payload.quantity > 0) {
                     return {...state, superTroops: [...state.superTroops]}
