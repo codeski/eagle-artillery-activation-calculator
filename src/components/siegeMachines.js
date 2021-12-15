@@ -12,20 +12,14 @@ const SiegeMachines = () => {
     const dispatch = useDispatch()
 
     useEffect (() => {
+        let total = siege.reduce((a, b) => {
+            return a + b.space * b.quantity
+        }, 0)
+        setSiegeTotal(total)
         if (siege.length === 0) {
             setDisabled(false)
         }
-
     }, [siege])
-
-    // const [addSiege, setAddSiege] = useState([])
-
-    // useEffect(()=>{
-    // })
-
-    
-
-    
 
     const handleClick = (e, siege) => {
         if (!e.currentTarget.disabled) {

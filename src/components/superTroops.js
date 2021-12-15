@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addSuperTroop, resetSuperTroops } from '../actions'
 
 const SuperTroops = () => {
-    const [chosenSuperTroops, setChosenSuperTroops] = useState([])
+
     const [superTroopTotal, setSuperTroopTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
 

@@ -1,3 +1,4 @@
+
 import React, {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {removeTroop, resetArmy} from '../actions'
@@ -6,16 +7,18 @@ const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
     const [activation, setActivation] = useState(200)
-    // const [grandTotal, setGrandTotal] = useState(0)
-    // const [chosenArmy, setChosenArmy] = useState([])
-
-    // useEffect(() => {
-    //     entireArmy.
-    // })
+    const [armyTotal, setArmyTotal] = useState(0)
 
     const dispatch = useDispatch()
     
     const entireArmy = useSelector(state => { return state.troops.concat(state.superTroops, state.spells, state.heros, state.siege)})
+
+    useEffect(() => {
+        let total = entireArmy.reduce((a, b) => { 
+            return a + b.space * b.quantity
+        }, 0)
+        setArmyTotal(total)
+    }, [entireArmy])
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
@@ -40,9 +43,6 @@ const EagleLvl = () => {
         }
     }
 
-    const addItUp = () => {
-        return entireArmy.reduce((a, b) => { return a + b.space * b.quantity}, 0)
-    }
 
     const handleClick = (e, troop) => {
         troop.quantity = troop.quantity - 1
@@ -74,11 +74,9 @@ const EagleLvl = () => {
     }
 
     const reset = () => {
+        entireArmy.forEach(troop => troop.quantity = 0)
         dispatch(resetArmy())
     }
-
-
-    
 
     return (
         <div>
@@ -87,7 +85,7 @@ const EagleLvl = () => {
             <input onChange={valueChange} type="range" min="1" max="5" step="1" />
             <h3>Eagle Level {rangeValue}</h3>
             <h3>Activates @ {activation}</h3>
-            <h1>{addItUp()}/{activation}</h1>
+            <h1>{armyTotal}/{activation}</h1>
             
             {uniqueArmy()}
             <button onClick={() => reset()}>Reset Army</button>
