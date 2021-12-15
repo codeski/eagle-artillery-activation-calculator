@@ -38,7 +38,6 @@ const reducer = (state = initialState, action) => {
             return {...state, superTroops: [...state.superTroops = []]} 
         case "REMOVETROOP":
             let troop = action.payload.type
-
             if (troop === "troops"){
                 if (action.payload.quantity > 0) {
                     return {...state, troops: [...state.troops]}

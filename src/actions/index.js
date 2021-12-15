@@ -1,5 +1,4 @@
 export const addTroops = (troop) => (dispatch) => {
-    console.log("about to add troop", troop)
     dispatch({type: "ADDTROOP", payload: troop}) 
 }
 
@@ -32,7 +31,6 @@ export const resetSiege = () => (dispatch) => {
 }
 
 export const addSuperTroop = (superTroop) => (dispatch) => {
-    // console.log("action", superTroop)
     dispatch({type: "ADDSUPERTROOP", payload: superTroop})
 }
 

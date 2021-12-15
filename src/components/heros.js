@@ -7,7 +7,6 @@ const Heros = () => {
     
     const [heroTotal, setHeroTotal] = useState(0)
     const [disabled, setDisabled] = useState(false)
-    // const [chosenTroops, setChosenTroops] = useState([])
 
     const dispatch = useDispatch()
 
@@ -28,7 +27,6 @@ const Heros = () => {
         if  (!e.currentTarget.disabled) {
             hero.quantity = hero.quantity + 1
             e.currentTarget.disabled = true
-            // setChosenTroops(prevChosenTroops => prevChosenTroops.concat(hero))
             dispatch(addHero(hero))
         } 
     }
@@ -52,7 +50,7 @@ const Heros = () => {
                 </button>
             )}
             <button onClick={(e) => resetButton(e)}>Reset Heros</button>
-            <n>Hero Total: {heroTotal}</n>
+            Hero Total: {heroTotal}
         </div>  
     )
 }

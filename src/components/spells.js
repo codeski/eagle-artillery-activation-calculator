@@ -68,7 +68,7 @@ const Spells = () => {
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset Spells</button>
-            <n>Spell Total: {spellTotal}</n>
+            Spell Total: {spellTotal}
         </div>
 
     )

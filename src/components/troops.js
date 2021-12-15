@@ -12,7 +12,6 @@ const Troops = () => {
     const troops = useSelector(state => { 
         return state.troops
     })
-    
 
     useEffect(() => {
         let total = troops.reduce((a, b) => {
@@ -35,11 +34,6 @@ const Troops = () => {
         RegTroops.forEach(troop => troop.quantity = 0)
     } 
 
-    // const disableSomeOrAllTroops = (e) => {
-    //     //select Troops from the DOM
-    //     //iterate through and disable
-    // }
-
     return (
         <div>
             <h3>Troops</h3>
@@ -56,7 +50,7 @@ const Troops = () => {
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset Troops</button>
-            <n>Troop Total: {troopTotal}</n>
+            Troop Total: {troopTotal}
         </div>
     )
 }

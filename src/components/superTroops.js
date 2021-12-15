@@ -22,24 +22,16 @@ const SuperTroops = () => {
 
     const handleClick = (e, troop) => {
         if (!disabled) {
-            troop.quantity = troop.quantity + 1
-            // setChosenSuperTroops(prevChosenTroops => prevChosenTroops.concat(troop)) 
+            troop.quantity = troop.quantity + 1 
             dispatch(addSuperTroop(troop))
         }
     }
 
     const resetButton = (e) => {
         setDisabled(false)
-        // setSuperTroopTotal(0)
-        // setChosenSuperTroops([])
         dispatch(resetSuperTroops())
         SuperTroopData.forEach(troop => troop.quantity = 0)
     } 
-
-    // const disableSomeOrAllTroops = (e) => {
-    //     //select Troops from the DOM
-    //     //iterate through and disable
-    // }
 
     return (
         <div>
@@ -57,7 +49,7 @@ const SuperTroops = () => {
                  
             )}
             <button onClick={(e) => resetButton(e)}>Reset Super Troops</button>
-            <n>Super Troop Total: {superTroopTotal}</n>
+            Super Troop Total: {superTroopTotal}
         </div>
     )
 }

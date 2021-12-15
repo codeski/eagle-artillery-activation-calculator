@@ -20,13 +20,13 @@ const EagleLvl = () => {
         setArmyTotal(total)
     }, [entireArmy])
 
-    useEffect (() => {
-        if (armyTotal >= activation) {
-            //disable all buttons
-            //activation written 
-        }
+    // useEffect (() => {
+    //     if (armyTotal >= activation) {
+    //         //disable all buttons
+    //         //activation written 
+    //     }
 
-    }, [armyTotal])
+    // }, [armyTotal])
 
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
@@ -57,10 +57,7 @@ const EagleLvl = () => {
         dispatch(removeTroop(troop))
         if (troop.type === 'heros') {
             let selected = document.querySelectorAll(".heroButton")
-            console.log ("heros", troop.name)
             selected.forEach(hero => {
-                console.log("hero", hero.id)
-                // debugger
                 if (troop.name === hero.id){
                     hero.disabled = false
                 }
@@ -72,8 +69,8 @@ const EagleLvl = () => {
         if (entireArmy){
             return entireArmy.map(troop => {
                     return (
-                        <button>
-                            <img onClick={ (e) => handleClick(e, troop) } className="troops" src={troop.pic} alt={troop.name} ></img>
+                        <button onClick={ (e) => handleClick(e, troop) } id={troop.name} key={troop.name}>
+                            <img  className="troops" src={troop.pic} alt={troop.name} ></img>
                             { troop.type === "troops" || troop.type === "spells" || troop.type === "superTroops" ? troop.quantity : null}
                         </button>
                     )
