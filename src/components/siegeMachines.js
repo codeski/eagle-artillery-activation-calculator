@@ -34,6 +34,7 @@ const SiegeMachines = () => {
         setDisabled(false)
         setSiegeTotal(0)
         dispatch(resetSiege())
+        SiegeMachinesData.forEach(siege => siege.quantity = 0)
     } 
 
     return (
