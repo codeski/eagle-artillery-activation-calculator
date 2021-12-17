@@ -1,7 +1,7 @@
 # README
 
 ## Eagle Artillery Activation Calculator 
-"Eagle Artillery Activation Calculator" is a single page application written using React Hooks and Redux library framework. The Eagle Artillery is a special defence created in the Clash of Clans game. It activates after a certain amount of offensive troops, spells and/or heros are deployed. This app allows one to easily plan a strategic attack while having the foreknowledge of exactly when this potentially devastating defense will activate. 
+"Eagle Artillery Activation Calculator" is a single page application written using React Hooks and Redux library framework. The Eagle Artillery is a special defence created in the Clash of Clans game. It activates after a certain amount of offensive troops, spells and/or heros are deployed. This app allows one to easily plan a strategic attack while having knowing exactly when this potentially devastating defense will activate. 
 
 ## Installation
 ```
