@@ -137,9 +137,9 @@ const EagleLvl = () => {
                 </h3>
                 {uniqueArmy()}
             </div>
-            {/* <div className="eagle-activated">
-                {armyTotal >= activation ? <h4>Eagle Artillery Activated</h4> : null}
-            </div> */}
+            <div className="eagle-activated">
+                {armyTotal >= activation ? <h4 id="activated-stamp">Activated</h4> : null}
+            </div>
             <br />
         </div>
     )

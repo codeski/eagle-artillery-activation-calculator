@@ -7,13 +7,20 @@ h1 {
   font-size: 3rem;
 }
 
-/* span {
-  display: inline-block;
-} */
+
+
+#seige-container {
+  /* background-color: red; */
+  padding-left: 50px;
+
+
+}
 
 #heros-and-siege {
   display: flex;
   padding-right: 30px;
+  /* width: 100px; */
+  /* margin: 0 30px; */
   /* padding: 30px; */
 }
 
@@ -88,6 +95,27 @@ button {
     transform: rotate(360deg);
   }
 }
+
+#activated-stamp {
+  position: absolute;
+  justify-content: center;
+  /* width: 1302.05px; */
+  /* height: 30px; */
+  /* left: 140.46px; */
+  top: 260px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 225px;
+  line-height: 284px;
+  z-index: -1;
+
+color: #fe0000;
+
+  opacity: 0.3;
+  transform: rotate(14.07deg);
+} 
 
 /* h1 {
   position: absolute;

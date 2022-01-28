@@ -7,7 +7,7 @@ const HeroSiegeSpan = () => {
             <div>
                 <Heros />
             </div>
-            <div>
+            <div id="seige-container">
                 <SeigeMachines />
             </div>
         </div>
