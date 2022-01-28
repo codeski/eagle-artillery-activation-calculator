@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { SiegeMachinesData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addSiege, resetSiege } from '../actions'
+import { Button } from '@material-ui/core' 
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const SiegeMachines = () => {
 
@@ -38,20 +40,32 @@ const SiegeMachines = () => {
     } 
 
     return (
-        <div>
-            <h3>Siege Machines</h3>
-            {SiegeMachinesData.map(siege =>          
-                <button key={siege.name} onClick={(e) => handleClick(e, siege)} disabled={disabled}>
-                    <img className="troops"
-                        src={siege.pic} 
-                        alt={siege.name} 
-                        space={siege.space}>
-                    </img>
-                </button>
-                
-            )}
-            <button onClick={(e) => resetButton(e)}>Reset Siege</button>
-            Siege Total: {siegeTotal}
+        <div className="siege">
+            <h3>Siege Machines: {siegeTotal} 
+                <Button
+                    endIcon={<DeleteIcon />} 
+                    size='small' 
+                    style={{
+                        fontSize: 14
+                    }}
+                    variant='contained' 
+                    color='secondary'
+                    onClick={(e) => resetButton(e)}
+                    >Reset
+                </Button>
+            </h3>
+            <div className="siege-container">
+                {SiegeMachinesData.map(siege =>          
+                    <button key={siege.name} onClick={(e) => handleClick(e, siege)} disabled={disabled}>
+                        <img className="troops"
+                            src={siege.pic} 
+                            alt={siege.name} 
+                            space={siege.space}>
+                        </img>
+                    </button>
+                )}
+            </div>
+            <p>(only 1 troop, CC troops do not count toward activation)</p>
         </div>
     )
 }

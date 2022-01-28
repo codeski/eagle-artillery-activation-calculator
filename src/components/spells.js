@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { SpellsData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addSpells, resetSpells } from '../actions'
+import { Button } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete' 
 
 const Spells = () => {
 
@@ -54,21 +56,33 @@ const Spells = () => {
 
     return (
         <div>
-            <h3>Spells</h3>
-            {SpellsData.map(spell =>                 
-                <button id="spellButton" onClick={ (e) =>handleClick(e, spell)} key={spell.name} disabled={disabled}>
-                    <img className="troops"
-                        src={spell.pic} 
-                        alt={spell.name} 
-                        space={spell.space}
-                        quantity={spell.quantity}>
-                    </img>
-                    { spell.quantity ? spell.quantity : null}
-                </button>
-                 
-            )}
-            <button onClick={(e) => resetButton(e)}>Reset Spells</button>
-            Spell Total: {spellTotal}
+            <h3>Spells: {spellTotal}
+                <Button
+                    endIcon={<DeleteIcon />} 
+                    size='small' 
+                    style={{
+                        fontSize: 14
+                    }}
+                    variant='contained' 
+                    color='secondary'
+                    onClick={(e) => resetButton(e)}
+                    >Reset
+                </Button>
+            </h3>
+                <div className="spells-container">
+                    {SpellsData.map(spell =>                 
+                        <button id="spellButton" onClick={ (e) =>handleClick(e, spell)} key={spell.name} disabled={disabled}>
+                            <img className="troops"
+                                src={spell.pic} 
+                                alt={spell.name} 
+                                space={spell.space}
+                                quantity={spell.quantity}>
+                            </img>
+                            { spell.quantity ? spell.quantity : null}
+                        </button>
+                
+                    )}
+                </div>
         </div>
 
     )

@@ -2,12 +2,16 @@
 import React, {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {removeTroop, resetArmy} from '../actions'
+import { Button } from '@material-ui/core' 
+import Title from '../components/title' 
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const EagleLvl = () => {
 
     const [rangeValue, setRangeValue ] = useState('5')
     const [activation, setActivation] = useState(200)
     const [armyTotal, setArmyTotal] = useState(0)
+    const [active, setActive] = useState(false)
 
     const dispatch = useDispatch()
     
@@ -18,6 +22,15 @@ const EagleLvl = () => {
             return a + b.space * b.quantity
         }, 0)
         setArmyTotal(total)
+    }, [entireArmy])
+
+    useEffect(() => {
+        if (armyTotal >= activation) {
+            setActive(true)
+        } else {
+            setActive(false)
+        }
+        changeBackgroundColor(active)
     }, [entireArmy])
 
     // useEffect (() => {
@@ -78,24 +91,55 @@ const EagleLvl = () => {
         }
     }
 
-    const reset = () => {
+    const resetButton = () => {
         entireArmy.forEach(troop => troop.quantity = 0)
         dispatch(resetArmy())
     }
 
+    const changeBackgroundColor = (active) => {
+        if (active === true){
+            document.querySelector(".eagle-artillery-container").style.backgroundColor = 'red'
+        } else {
+            let body = document.querySelector(".eagle-artillery-container")
+            body.style.backgroundColor = 'green'
+        }
+    }
+
     return (
-        <div>
-            <img src={imageChange()} alt={`Eagle Level {rangeValue}`} />
-            <br />
-            <input onChange={valueChange} type="range" min="1" max="5" step="1" />
-            <h3>Eagle Level {rangeValue}</h3>
-            <h3>Activates @ {activation}</h3>
-            <h1>{armyTotal}/{activation}</h1>
-            {armyTotal >= activation ? <h1>Eagle Artillery Activated</h1> : null}
-            
-            {uniqueArmy()}
-            <button onClick={() => reset()}>Reset Army</button>
-            
+        <div className="eagle-artillery-container"> 
+            <div className="eagle-image" id="hp">
+                <img src={imageChange()} alt={`Eagle Level {rangeValue}`}  />
+                <br />
+                <input onChange={valueChange} type="range" min="1" max="5" step="1" />
+            </div>
+            <div className="eagle-info">  
+                <Title /> 
+                <h3>Eagle Level: {rangeValue}</h3>
+                <h3>Activates at: {activation}</h3>
+                <span>
+                    <h2>Count: {armyTotal}</h2> 
+                    <h2>Remaining: {activation - armyTotal}</h2>
+                </span>
+            </div> 
+            <div className="chosen-army">
+                <h3>Chosen Army: (click any to remove)
+                    <Button
+                        endIcon={<DeleteIcon />} 
+                        size='small' 
+                        style={{
+                            fontSize: 14
+                        }}
+                        variant='contained' 
+                        color='secondary'
+                        onClick={(e) => resetButton(e)}
+                        >Clear All
+                    </Button>
+                </h3>
+                {uniqueArmy()}
+            </div>
+            {/* <div className="eagle-activated">
+                {armyTotal >= activation ? <h4>Eagle Artillery Activated</h4> : null}
+            </div> */}
             <br />
         </div>
     )

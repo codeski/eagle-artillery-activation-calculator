@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { SuperTroopData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addSuperTroop, resetSuperTroops } from '../actions'
+import { Button } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete' 
 
 const SuperTroops = () => {
 
@@ -35,21 +37,33 @@ const SuperTroops = () => {
 
     return (
         <div>
-            <h3>Super Troops</h3>
-            {SuperTroopData.map(troop =>                 
-                <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
-                    <img className="troops"
-                        src={troop.pic} 
-                        alt={troop.name} 
-                        space={troop.space}
-                        quantity={troop.quantity}>
-                    </img>
-                    { troop.quantity ? troop.quantity : null}
-                </button>
-                 
-            )}
-            <button onClick={(e) => resetButton(e)}>Reset Super Troops</button>
-            Super Troop Total: {superTroopTotal}
+            <h3>Super Troops: {superTroopTotal}
+                <Button
+                        endIcon={<DeleteIcon />} 
+                        size='small' 
+                        style={{
+                            fontSize: 14
+                        }}
+                        variant='contained' 
+                        color='secondary'
+                        onClick={(e) => resetButton(e)}
+                        >Reset
+                </Button>
+            </h3>
+            <div className="superTroop-container">
+                {SuperTroopData.map(troop =>                 
+                    <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
+                        <img className="troops"
+                            src={troop.pic} 
+                            alt={troop.name} 
+                            space={troop.space}
+                            quantity={troop.quantity}>
+                        </img>
+                        { troop.quantity ? troop.quantity : null}
+                    </button>    
+                )}
+            </div>
+
         </div>
     )
 }

@@ -2,7 +2,7 @@
 
 const Title = () => {
     return (
-        <h1>Eagle Artillery Activation Calculator</h1>
+        <h1>Eagle Artillery Calculator</h1>
     )
 }
 

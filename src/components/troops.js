@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { RegTroops } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addTroops, resetTroops } from '../actions'
+import { Button } from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/Delete' 
 
 const Troops = () => {
     const [troopTotal, setTroopTotal] = useState(0)
@@ -36,7 +38,20 @@ const Troops = () => {
 
     return (
         <div>
-            <h3>Troops</h3>
+            <h3>Troops: {troopTotal} 
+                <Button
+                    endIcon={<DeleteIcon />} 
+                    size='small' 
+                    style={{
+                        fontSize: 14
+                    }}
+                    variant='contained' 
+                    color='secondary'
+                    onClick={(e) => resetButton(e)}
+                    >Reset
+                </Button>
+            </h3>
+            <div className="troop-container">   
             {RegTroops.map(troop =>                 
                 <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
                     <img className="troops"
@@ -49,8 +64,7 @@ const Troops = () => {
                 </button>
                  
             )}
-            <button onClick={(e) => resetButton(e)}>Reset Troops</button>
-            Troop Total: {troopTotal}
+            </div>
         </div>
     )
 }

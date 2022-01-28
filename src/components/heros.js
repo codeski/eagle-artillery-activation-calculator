@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { HerosData } from '../data/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { addHero, resetHeros } from '../actions'
+import { Button } from '@material-ui/core' 
+import DeleteIcon from '@material-ui/icons/Delete'
 
 const Heros = () => {
     
@@ -39,18 +41,31 @@ const Heros = () => {
 
     return (
         <div>
-            <h3>Heros</h3>
-            {HerosData.map(hero =>          
-                <button id={hero.name} key={hero.name} className="heroButton" onClick={(e) => handleClick(e, hero)} disabled={disabled}>
-                    <img className="troops"   
-                        src={hero.pic} 
-                        alt={hero.name} 
-                        space={hero.space}>
-                    </img>
-                </button>
-            )}
-            <button onClick={(e) => resetButton(e)}>Reset Heros</button>
-            Hero Total: {heroTotal}
+            <h3>Heros: {heroTotal}
+                <Button
+                    endIcon={<DeleteIcon />} 
+                    size='small' 
+                    style={{
+                        fontSize: 14
+                    }}
+                    variant='contained' 
+                    color='secondary'
+                    onClick={(e) => resetButton(e)}
+                    >Reset
+                </Button>
+            </h3>
+            <div className="hero-container">
+                {HerosData.map(hero =>          
+                    <button id={hero.name} key={hero.name} className="heroButton" onClick={(e) => handleClick(e, hero)} disabled={disabled}>
+                        <img className="troops"   
+                            src={hero.pic} 
+                            alt={hero.name} 
+                            space={hero.space}>
+                        </img>
+                    </button>
+                
+                )}
+            </div>
         </div>  
     )
 }
