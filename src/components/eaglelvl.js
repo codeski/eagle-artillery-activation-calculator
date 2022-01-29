@@ -101,7 +101,8 @@ const EagleLvl = () => {
             document.querySelector(".eagle-artillery-container").style.backgroundColor = 'red'
         } else {
             let body = document.querySelector(".eagle-artillery-container")
-            body.style.backgroundColor = 'green'
+            body.style.backgroundColor = 'lightgreen'
+            body.style.height = '150%'
         }
     }
 
@@ -116,18 +117,18 @@ const EagleLvl = () => {
                 <Title /> 
                 <h3>Eagle Level: {rangeValue}</h3>
                 <h3>Activates at: {activation}</h3>
-                <span>
-                    <h2>Count: {armyTotal}</h2> 
-                    <h2>Remaining: {activation - armyTotal}</h2>
-                </span>
+                <h2 className="keeptogether">Count: {armyTotal}</h2>
+                <h2 className="keeptogether">Remaining: {activation - armyTotal}</h2>
             </div> 
             <div className="chosen-army">
                 <h3>Chosen Army: (click any to remove)
                     <Button
+                        className="custom-button"
                         endIcon={<DeleteIcon />} 
                         size='small' 
                         style={{
-                            fontSize: 14
+                            fontSize: 14,
+                            marginTop: 13.5
                         }}
                         variant='contained' 
                         color='secondary'

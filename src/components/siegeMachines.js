@@ -46,7 +46,8 @@ const SiegeMachines = () => {
                     endIcon={<DeleteIcon />} 
                     size='small' 
                     style={{
-                        fontSize: 14
+                        fontSize: 14,
+                        marginTop: 13.5
                     }}
                     variant='contained' 
                     color='secondary'

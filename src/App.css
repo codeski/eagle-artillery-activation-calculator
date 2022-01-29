@@ -5,15 +5,13 @@
 
 h1 {
   font-size: 3rem;
+  line-height: 2.9rem;
+  
 }
-
-
 
 #seige-container {
   /* background-color: red; */
   padding-left: 50px;
-
-
 }
 
 #heros-and-siege {
@@ -30,8 +28,8 @@ p {
 
 #hp  {
   float: left;    
-   margin: 0 15px 0 0;
-  }
+  margin: 0 15px 0 0;
+}
 
 
 h3 {
@@ -42,11 +40,28 @@ h3 {
 h2 {
   display: inline;
   padding-right: 30px;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 
 button {
+  position: flex;
   margin-left: 2px;
+  /* margin-top: 10px; */
+  /* line-height: 2; */
+
+}
+
+.custom-button {
+  margin-top: 30px;
+}
+
+.eagle-artillery-container {
+  border: 1px solid black;
+  border-width: 5px 0;
+}
+
+.keeptogether {
+  white-space: nowrap;
 }
 
 /* .eagle-artillery-container {
