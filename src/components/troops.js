@@ -38,12 +38,13 @@ const Troops = () => {
 
     return (
         <div>
-            <h3>Troops: {troopTotal} 
+            <h3 className="army">Troops: {troopTotal} 
                 <Button
                     endIcon={<DeleteIcon />} 
                     size='small' 
                     style={{
-                        fontSize: 14
+                        fontSize: 14,
+                        marginLeft: '10px',
                     }}
                     variant='contained' 
                     color='secondary'
@@ -51,7 +52,7 @@ const Troops = () => {
                     >Reset
                 </Button>
             </h3>
-            <div className="troop-container">   
+            <div className="army-container">   
             {RegTroops.map(troop =>                 
                 <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
                     <img className="troops"

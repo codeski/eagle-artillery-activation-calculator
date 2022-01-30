@@ -128,7 +128,8 @@ const EagleLvl = () => {
                         size='small' 
                         style={{
                             fontSize: 14,
-                            marginTop: 13.5
+                            marginTop: 13.5,
+                            marginLeft: '10px',
                         }}
                         variant='contained' 
                         color='secondary'

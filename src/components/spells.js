@@ -56,12 +56,13 @@ const Spells = () => {
 
     return (
         <div>
-            <h3>Spells: {spellTotal}
+            <h3 className="army" >Spells: {spellTotal}
                 <Button
                     endIcon={<DeleteIcon />} 
                     size='small' 
                     style={{
-                        fontSize: 14
+                        fontSize: 14,
+                        marginLeft: '10px',
                     }}
                     variant='contained' 
                     color='secondary'
@@ -69,7 +70,7 @@ const Spells = () => {
                     >Reset
                 </Button>
             </h3>
-                <div className="spells-container">
+                <div className="army-container">
                     {SpellsData.map(spell =>                 
                         <button id="spellButton" onClick={ (e) =>handleClick(e, spell)} key={spell.name} disabled={disabled}>
                             <img className="troops"

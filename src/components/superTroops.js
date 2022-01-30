@@ -37,12 +37,13 @@ const SuperTroops = () => {
 
     return (
         <div>
-            <h3>Super Troops: {superTroopTotal}
+            <h3 className="army" >Super Troops: {superTroopTotal}
                 <Button
                         endIcon={<DeleteIcon />} 
                         size='small' 
                         style={{
-                            fontSize: 14
+                            fontSize: 14,
+                            marginLeft: '10px',
                         }}
                         variant='contained' 
                         color='secondary'
@@ -50,7 +51,7 @@ const SuperTroops = () => {
                         >Reset
                 </Button>
             </h3>
-            <div className="superTroop-container">
+            <div className="army-container">
                 {SuperTroopData.map(troop =>                 
                     <button id="troopButton" onClick={ (e) =>handleClick(e, troop)} key={troop.name} disabled={disabled}>
                         <img className="troops"

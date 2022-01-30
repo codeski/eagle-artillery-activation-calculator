@@ -41,11 +41,12 @@ const Heros = () => {
 
     return (
         <div>
-            <h3>Heros: {heroTotal}
+            <h3 className="army">Heros: {heroTotal}
                 <Button
                     endIcon={<DeleteIcon />} 
                     size='small' 
                     style={{
+                        marginLeft: '10px',
                         fontSize: 14,
                         marginTop: 13.5
                     }}
@@ -55,7 +56,7 @@ const Heros = () => {
                     >Reset
                 </Button>
             </h3>
-            <div className="hero-container">
+            <div className="army-container">
                 {HerosData.map(hero =>          
                     <button id={hero.name} key={hero.name} className="heroButton" onClick={(e) => handleClick(e, hero)} disabled={disabled}>
                         <img className="troops"   

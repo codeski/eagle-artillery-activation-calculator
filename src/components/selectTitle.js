@@ -1,6 +1,6 @@
 const SelectTitle = () => {
     return (
-        <h2>Select your Army:</h2>
+        <h2 className="select-army">Select your Army:</h2>
     )
 }
 

@@ -3,6 +3,11 @@
   width: 40px;
 }
 
+.select-army {
+  /* line-height: 0px; */
+  /* margin-bottom: -20px; */
+}
+
 h1 {
   font-size: 3rem;
   line-height: 2.9rem;
@@ -10,7 +15,6 @@ h1 {
 }
 
 #seige-container {
-  /* background-color: red; */
   padding-left: 50px;
 }
 
@@ -24,6 +28,8 @@ h1 {
 
 p {
   font-size: .75rem;
+  margin-top: 0;
+  margin-bottom: -50px;
 }
 
 #hp  {
@@ -46,14 +52,12 @@ h2 {
 button {
   position: flex;
   margin-left: 2px;
-  /* margin-top: 10px; */
-  /* line-height: 2; */
-
 }
 
-.custom-button {
+/* .custom-button {
   margin-top: 30px;
-}
+  margin-left: 1000px
+} */
 
 .eagle-artillery-container {
   border: 1px solid black;
@@ -64,33 +68,38 @@ button {
   white-space: nowrap;
 }
 
-/* .eagle-artillery-container {
-  display: inline-block;
-} */
-
 .chosen-army-container {
   border: 3px solid black;
   border-style: dashed;
 }
 
+.army-container {
+  margin-bottom: 0px;
+}
+
+.army {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
 .App {
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 30px; 
+  margin-top: 5px; 
   margin-bottom: 30px;
   text-align: left;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -103,18 +112,18 @@ button {
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 #activated-stamp {
   position: absolute;
@@ -136,48 +145,4 @@ color: #fe0000;
   opacity: 0.3;
   transform: rotate(14.07deg);
 } 
-
-/* h1 {
-  position: absolute;
-  left: 30.01%;
-  right: 5.52%;
-  top: 0%;
-  bottom: 80%;
-
-  font-family: Rounded Mplus 1c Bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 50px;
-  line-height: 50px;
-
-  color: #000000;
-}
-
-h2:before{
-  content:" "; 
-  display:inline-block; 
-  width:32px;
-}
-.eagle-info {
-  display: inline;
-  position: absolute;
-  left: 31.9%;
-  top: 15%;
-  bottom: 68.84%;
-  right: 5.52%;
-
-  font-family: Rounded Mplus 1c Bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-
-}
-
-.eagle-image {
-  position: absolute;
-  left: 5.01%;
-  right: 5.52%;
-  top: 15px;
-} */
-
 

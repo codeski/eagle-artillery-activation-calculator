@@ -41,11 +41,12 @@ const SiegeMachines = () => {
 
     return (
         <div className="siege">
-            <h3>Siege Machines: {siegeTotal} 
+            <h3 className="army">Siege Machines: {siegeTotal} 
                 <Button
                     endIcon={<DeleteIcon />} 
                     size='small' 
                     style={{
+                        marginLeft: '10px',
                         fontSize: 14,
                         marginTop: 13.5
                     }}
@@ -55,7 +56,7 @@ const SiegeMachines = () => {
                     >Reset
                 </Button>
             </h3>
-            <div className="siege-container">
+            <div className="army-container">
                 {SiegeMachinesData.map(siege =>          
                     <button key={siege.name} onClick={(e) => handleClick(e, siege)} disabled={disabled}>
                         <img className="troops"
