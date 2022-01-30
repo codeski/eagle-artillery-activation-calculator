@@ -69,4 +69,5 @@ export const SuperTroopData = [
     {type: "superTroops", name: 'Super Witch', pic: '/images/SuperTroops/Super_Witch.webp', quantity: 0, space: 40},
     {type: "superTroops", name: 'Ice Hound', pic: '/images/SuperTroops/Ice_Hound.webp', quantity: 0, space: 40},
     {type: "superTroops", name: 'Super Bowler', pic: '/images/SuperTroops/Super_Bowler.webp', quantity: 0, space: 30},
+    {type: "superTroops", name: 'Super Dragon', pic: '/images/SuperTroops/Super_Dragon.webp', quantity: 0, space: 40},
 ]

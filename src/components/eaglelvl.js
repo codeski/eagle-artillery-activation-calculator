@@ -136,7 +136,9 @@ const EagleLvl = () => {
                         >Clear All
                     </Button>
                 </h3>
-                {uniqueArmy()}
+                <div className="chosen-army-container">
+                    {uniqueArmy()}
+                </div>
             </div>
             <div className="eagle-activated">
                 {armyTotal >= activation ? <h4 id="activated-stamp">Activated</h4> : null}
