@@ -61,7 +61,7 @@ const Troops = () => {
                         space={troop.space}
                         quantity={troop.quantity}>
                     </img>
-                    { troop.quantity ? troop.quantity : null}
+                    <span id="quantity" >{ troop.quantity ? troop.quantity : null}</span>
                 </button>
                  
             )}

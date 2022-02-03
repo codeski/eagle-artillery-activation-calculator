@@ -3,15 +3,32 @@
   width: 40px;
 }
 
-.select-army {
-  /* line-height: 0px; */
-  /* margin-bottom: -20px; */
+/* adjust level */
+h4 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-right: 20px;
+
 }
 
 h1 {
   font-size: 3rem;
-  line-height: 2.9rem;
-  
+  line-height: 2.8rem;
+  margin-bottom: 10px;
+}
+
+#quantity {
+  display: flex;
+  position: absolute; 
+  margin-left: 25px;
+  color: rgb(255, 10, 10);
+  font-size: 1.3rem;
+  font-weight: bold 700;
+  font-family: 'Rowdies', cursive;
+  -webkit-text-stroke-width: .9px;
+  -webkit-text-stroke-color: rgb(255, 215, 215);
+  margin-top: -21px;
 }
 
 #seige-container {
@@ -20,10 +37,6 @@ h1 {
 
 #heros-and-siege {
   display: flex;
-  padding-right: 30px;
-  /* width: 100px; */
-  /* margin: 0 30px; */
-  /* padding: 30px; */
 }
 
 p {
@@ -41,6 +54,7 @@ p {
 h3 {
   font-size: 1.5rem;
   line-height: 0;
+  
 }
 
 h2 {
@@ -52,6 +66,15 @@ h2 {
 button {
   position: flex;
   margin-left: 2px;
+}
+
+.eagle-info {
+  margin-top: 20px;
+}
+
+.keep-together {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* .custom-button {
@@ -69,8 +92,13 @@ button {
 }
 
 .chosen-army-container {
+  display: flex;
   border: 3px solid black;
   border-style: dashed;
+  height:auto;
+  min-height:50px;
+  height:auto !important;        /* for IE as it does not support min-height */
+  
 }
 
 .army-container {
@@ -128,10 +156,7 @@ button {
 #activated-stamp {
   position: absolute;
   justify-content: center;
-  /* width: 1302.05px; */
-  /* height: 30px; */
-  /* left: 140.46px; */
-  top: 260px;
+  top: 500px;
 
   font-family: Rubik;
   font-style: normal;
@@ -140,7 +165,7 @@ button {
   line-height: 284px;
   z-index: -1;
 
-color: #fe0000;
+  color: #fe0000;
 
   opacity: 0.3;
   transform: rotate(14.07deg);

@@ -33,14 +33,6 @@ const EagleLvl = () => {
         changeBackgroundColor(active)
     }, [entireArmy])
 
-    // useEffect (() => {
-    //     if (armyTotal >= activation) {
-    //         //disable all buttons
-    //         //activation written 
-    //     }
-
-    // }, [armyTotal])
-
     const valueChange = async (event) => {
          setRangeValue(event.target.value)
          if (event.target.value === '1' || event.target.value === '2') {
@@ -64,7 +56,6 @@ const EagleLvl = () => {
         }
     }
 
-
     const handleClick = (e, troop) => {
         troop.quantity = troop.quantity - 1
         dispatch(removeTroop(troop))
@@ -84,7 +75,7 @@ const EagleLvl = () => {
                     return (
                         <button onClick={ (e) => handleClick(e, troop) } id={troop.name} key={troop.name}>
                             <img  className="troops" src={troop.pic} alt={troop.name} ></img>
-                            { troop.type === "troops" || troop.type === "spells" || troop.type === "superTroops" ? troop.quantity : null}
+                            <span id="quantity">{ troop.type === "troops" || troop.type === "spells" || troop.type === "superTroops" ? troop.quantity : null}</span>
                         </button>
                     )
             })
@@ -98,7 +89,7 @@ const EagleLvl = () => {
 
     const changeBackgroundColor = (active) => {
         if (active === true){
-            document.querySelector(".eagle-artillery-container").style.backgroundColor = 'red'
+            document.querySelector(".eagle-artillery-container").style.backgroundColor = '#FF6347'
         } else {
             let body = document.querySelector(".eagle-artillery-container")
             body.style.backgroundColor = 'lightgreen'
@@ -111,12 +102,17 @@ const EagleLvl = () => {
             <div className="eagle-image" id="hp">
                 <img src={imageChange()} alt={`Eagle Level {rangeValue}`}  />
                 <br />
+                <span>
                 <input onChange={valueChange} type="range" min="1" max="5" step="1" />
+                <h4>(adjust level)</h4>
+                </span>
             </div>
             <div className="eagle-info">  
                 <Title /> 
+                <span id="keep-together">
                 <h3>Eagle Level: {rangeValue}</h3>
                 <h3>Activates at: {activation}</h3>
+                </span>
                 <h2 className="keeptogether">Count: {armyTotal}</h2>
                 <h2 className="keeptogether">Remaining: {activation - armyTotal}</h2>
             </div> 
@@ -124,7 +120,7 @@ const EagleLvl = () => {
                 <h3>Chosen Army: (click any to remove)
                     <Button
                         className="custom-button"
-                        endIcon={<DeleteIcon />} 
+                        endIcon={<DeleteIcon />}   
                         size='small' 
                         style={{
                             fontSize: 14,
@@ -138,7 +134,9 @@ const EagleLvl = () => {
                     </Button>
                 </h3>
                 <div className="chosen-army-container">
-                    {uniqueArmy()}
+                    <div className="chosen-army-container-inner">
+                        <span id="unique-army">{uniqueArmy()}</span>
+                    </div>
                 </div>
             </div>
             <div className="eagle-activated">

@@ -79,7 +79,7 @@ const Spells = () => {
                                 space={spell.space}
                                 quantity={spell.quantity}>
                             </img>
-                            { spell.quantity ? spell.quantity : null}
+                            <span id="quantity">{ spell.quantity ? spell.quantity : null}</span>
                         </button>
                 
                     )}
