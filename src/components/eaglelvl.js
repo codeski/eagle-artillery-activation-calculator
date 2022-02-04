@@ -135,7 +135,7 @@ const EagleLvl = () => {
                 </h3>
                 <div className="chosen-army-container">
                     <div className="chosen-army-container-inner">
-                        <span id="unique-army">{uniqueArmy()}</span>
+                    <span id="unique-army">{uniqueArmy()}</span>
                     </div>
                 </div>
             </div>

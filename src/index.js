@@ -8,13 +8,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import selectedArmy from './reducer/selectedArmy';
 
+
 const store = createStore(selectedArmy, applyMiddleware(reduxThunk))
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode> 
+      <React.StrictMode>
+        <App />
+      </React.StrictMode> 
   </Provider>,
   document.getElementById('root')
 );
