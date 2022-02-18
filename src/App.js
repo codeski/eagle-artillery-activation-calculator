@@ -5,7 +5,7 @@ import './App.css';
 import Calculator from './components/calculator'
 import Armies from './components/armies'
 import NavBar from './components/navBar'
-import NoMatch from './components/noMatch'
+// import NoMatch from './components/noMatch'
 
 import { 
   BrowserRouter as Router,
@@ -41,8 +41,10 @@ function App() {
 
   return (
     <div className="App">
+        
       <Router>
-        <NavBar /> 
+        <NavBar />
+        
           <Routes>
             <Route exact path="/" element={<Calculator />} />
             <Route path="/armies" element={<Armies />} />
