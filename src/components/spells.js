@@ -49,11 +49,6 @@ const Spells = () => {
         SpellsData.forEach(spell => spell.quantity = 0)
     } 
 
-    // const disableSomeOrAllSpells = (e) => {
-    //     //select spells from the DOM
-    //     //iterate through and disable
-    // }
-
     return (
         <div>
             <h3 className="army" >Spells: {spellTotal}

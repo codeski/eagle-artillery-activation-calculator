@@ -1,4 +1,3 @@
-// import { useEffect } from 'react'
 import EagleLvl from './eaglelvl'
 import SelectArmy from './selectArmy'
 

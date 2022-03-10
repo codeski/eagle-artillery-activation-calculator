@@ -1,16 +1,5 @@
-// const displayHeading = () => {
-//   if (window.location.pathname === '/') {
-//         return 'Calculator'
-//     } else if ('/armies') {
-//         return 'Armies'
-//     } else {
-//         return 'No Page Found'
-//     }
-// };
-
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function navbar() {
   return (
